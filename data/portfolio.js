@@ -3,7 +3,7 @@ const about = {
   // each element in the description array is a paragraph
   name: 'Michael Bowen',
   role: 'Game Programmer',
-  company: 'Champlain College '23',
+  company: 'Champlain College 23',
   description: [
     'Graduating in May 2023 I have focused on Game CI/CD, XR, Physics Programming.',
   ],
