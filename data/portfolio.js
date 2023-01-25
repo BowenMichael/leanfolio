@@ -1,16 +1,16 @@
 const about = {
   // all the properties are optional - can be left empty or deleted
   // each element in the description array is a paragraph
-  name: 'John Doe',
-  role: 'Software Engineer',
-  company: 'Acme Labs',
+  name: 'Michael Bowen',
+  role: 'Game Programmer',
+  company: 'Champlain College '23',
   description: [
-    'Adipisicing sit fugit ullam unde aliquid sequi Facilis soluta facilis perspiciatis corporis nulla aspernatur. Autem eligendi rerum delectus modi quisquam? Illo ut quasi nemo ipsa cumque perspiciatis! Maiores minima consectetur.',
+    'Graduating in May 2023 I have focused on Game CI/CD, XR, Physics Programming.',
   ],
-  resume: 'https://example.com',
+  resume: 'michael-bowen.com/resume',
   social: {
-    linkedin: 'https://linkedin.com',
-    github: 'https://github.com',
+    linkedin: 'https://www.linkedin.com/in/bowen-michael/',
+    github: 'https://github.com/BowenMichael',
   },
   greetingEmoji: '👋',
 }
@@ -20,12 +20,12 @@ const projects = [
   // if there are no projects, Projects section won't show up
   // each element in the description array is a paragraph
   {
-    thumbnail: 'images/placeholder-image.jpeg',
-    name: 'Project 1',
+    thumbnail: 'https://michael-bowen.com/DeadPedal-2.png',
+    name: 'Dead Pedal',
     description: [
-      'Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam',
+      'Dead pedal is a third person driving action game. Personal Contributions: Drove development of custom car physics that can interface with AI, Audio systems, and Blueprints. Setup automated tools to support continuous integration practices with Google Cloud and Jenkins. Supported the team by documenting best practices to interact with Unreal Engine and Git.',
     ],
-    stack: ['SASS', 'TypeScript', 'React'],
+    stack: ['Lead Programmer','Unreal 5', 'CI/CD', 'Google Cloud'],
     sourceCode: 'https://github.com',
     livePreview: 'https://github.com',
   },
@@ -64,23 +64,22 @@ const projects = [
 const skills = [
   // skills can be added or removed
   // if there are no skills, Skills section won't show up
-  'HTML',
-  'CSS',
-  'JavaScript',
+  'C++',
+  'C#',
   'TypeScript',
+  'Unity',
+  'Unreal 5',
+  'Google Cloud',
+  'Jenkins',
   'React',
-  'Redux',
-  'SASS',
-  'Material UI',
   'Git',
+  'GitHub Actions',
   'CI/CD',
-  'Jest',
-  'Enzyme',
 ]
 
 const contact = {
   // email is optional - if left empty Contact section won't show up
-  email: 'johndoe@mail.com',
+  email: 'michael@thebowenfamily.com',
 }
 
 export { about, projects, skills, contact }
