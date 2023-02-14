@@ -55,7 +55,9 @@ const About = () => {
               </span>
             </a>
           )}
-
+          {img && (<>
+                   <img src={img}/ width={'100%'}>
+                   </>)}
           {social && (
             <>
               {social.github && (
