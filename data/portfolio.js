@@ -25,24 +25,24 @@ const projects = [
     name: 'Dead Pedal',
     description: [
       'Dead pedal is a third person driving action game.',
-      'Personal Contributions: Drove development of custom car physics that can interface with AI, Audio systems, and Blueprints. Setup automated tools to support continuous integration practices with Google Cloud and Jenkins. Supported the team by documenting best practices to interact with Unreal Engine and Git.',
+      'Personal Contributions: \nDrove development of custom car physics that can interface with AI, Audio systems, and Blueprints. Setup automated tools to support continuous integration practices with Google Cloud and Jenkins. Supported the team by documenting best practices to interact with Unreal Engine and Git.',
     ],
-    stack: ['Lead Programmer','Unreal 5', 'CI/CD', 'Google Cloud', 'Git', 'Jenkins'],
+    stack: ['Unreal 5', 'Git', 'Jenkins', 'Google Cloud', 'Lead Programmer'],
     livePreview: 'https://larnio.itch.io/dead-pedal',
   },
   {
-    thumbnail: 'images/placeholder-image.jpeg',
-    name: 'Project 2',
+    thumbnail: 'https://michael-bowen.com/images/turbo-hybrid-cube.gif',
+    name: 'Turbo-Hybrid Game Engine',
     description: [
-      'Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam',
+      'The Turbo Hybrid Game Engine was created to understand what it takes to build a game engine from scratch and appreciate some core systems. Structure of Arrays component systems, Data driven game objects and 3D rendering were key design goals for this engine.',
     ],
-    stack: ['SASS', 'TypeScript', 'React'],
-    sourceCode: 'https://github.com',
-    livePreview: 'https://github.com',
+    stack: ['C++', 'SDL2', 'bgfx' ],
+    sourceCode: 'Spartakids',
+    livePreview: 'https://docs.google.com/presentation/d/1pGFhkVGUu52NhdT-uWjjTgoqjUhPl1Ncy2UQMJzD5Ig/edit?usp=sharing',
   },
   {
     thumbnail: 'images/placeholder-image.jpeg',
-    name: 'Project 3',
+    name: 'Spartakids',
     description: [
       'Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam',
     ],
