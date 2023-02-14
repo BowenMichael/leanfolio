@@ -56,7 +56,7 @@ const About = () => {
             </a>
           )}
           {img && (<>
-                   <img src={img}/ width={'100%'}>
+                   <img src={img} width={'100%'}/>
                    </>)}
           {social && (
             <>
