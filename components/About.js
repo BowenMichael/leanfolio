@@ -13,6 +13,10 @@ const About = () => {
     <div className='about'>
       <div className='about__pseudo-padding about__pseudo-padding-top' />
 
+      {img && (<>
+        <img src={img} height={'25%'}/>
+      </>)}
+
       {firstName && (
         <h1 className='about__greeting animate__animated animate__fadeInUp animate__delay-1s'>
           Hey, I&apos;m <span className='text--strong'>{firstName}</span>.
@@ -20,9 +24,7 @@ const About = () => {
         </h1>
             
       )}
-      {img && (<>
-        <img src={img} height={'25%'}/>
-      </>)}
+      
       {role && (
         <h1 className='about__role animate__animated animate__fadeInUp animate__delay-3s'>
           I&apos;m a {role}
