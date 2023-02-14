@@ -5,8 +5,9 @@ const about = {
   role: 'Game Programmer',
   company: 'Champlain College 23',
   description: [
-    'Graduating in May 2023 I have focused on Game CI/CD, XR, Physics Programming.',
+    'Graduating in May 2023 with a focus in game CI/CD, extended reality, physics programming.',
   ],
+  img : 'https://michael-bowen.com/michaelSmaller.png',
   resume: 'michael-bowen.com/resume',
   social: {
     linkedin: 'https://www.linkedin.com/in/bowen-michael/',
@@ -23,11 +24,11 @@ const projects = [
     thumbnail: 'https://michael-bowen.com/DeadPedal-2.png',
     name: 'Dead Pedal',
     description: [
-      'Dead pedal is a third person driving action game. Personal Contributions: Drove development of custom car physics that can interface with AI, Audio systems, and Blueprints. Setup automated tools to support continuous integration practices with Google Cloud and Jenkins. Supported the team by documenting best practices to interact with Unreal Engine and Git.',
+      'Dead pedal is a third person driving action game.',
+      'Personal Contributions: Drove development of custom car physics that can interface with AI, Audio systems, and Blueprints. Setup automated tools to support continuous integration practices with Google Cloud and Jenkins. Supported the team by documenting best practices to interact with Unreal Engine and Git.',
     ],
-    stack: ['Lead Programmer','Unreal 5', 'CI/CD', 'Google Cloud'],
-    sourceCode: 'https://github.com',
-    livePreview: 'https://github.com',
+    stack: ['Lead Programmer','Unreal 5', 'CI/CD', 'Google Cloud', 'Git', 'Jenkins'],
+    livePreview: 'https://larnio.itch.io/dead-pedal',
   },
   {
     thumbnail: 'images/placeholder-image.jpeg',
