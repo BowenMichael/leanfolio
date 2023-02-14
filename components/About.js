@@ -21,7 +21,7 @@ const About = () => {
             
       )}
       {img && (<>
-        <img src={img} width={'100%'}/>
+        <img src={img} height={'25%'}/>
       </>)}
       {role && (
         <h1 className='about__role animate__animated animate__fadeInUp animate__delay-3s'>
