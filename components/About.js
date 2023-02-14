@@ -14,7 +14,7 @@ const About = () => {
       <div className='about__pseudo-padding about__pseudo-padding-top' />
 
       {img && (<>
-        <img src={img} height={'25%'}/>
+        <img src={img} height={'300px'}/>
       </>)}
 
       {firstName && (
