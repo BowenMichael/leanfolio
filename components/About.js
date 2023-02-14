@@ -18,8 +18,11 @@ const About = () => {
           Hey, I&apos;m <span className='text--strong'>{firstName}</span>.
           {greetingEmoji && <span> {greetingEmoji}</span>}
         </h1>
+            
       )}
-
+      {img && (<>
+        <img src={img} width={'100%'}/>
+      </>)}
       {role && (
         <h1 className='about__role animate__animated animate__fadeInUp animate__delay-3s'>
           I&apos;m a {role}
@@ -55,9 +58,7 @@ const About = () => {
               </span>
             </a>
           )}
-          {img && (<>
-                   <img src={img} width={'100%'}/>
-                   </>)}
+         
           {social && (
             <>
               {social.github && (
