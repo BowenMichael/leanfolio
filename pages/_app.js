@@ -14,19 +14,24 @@ import '../styles/Skills.css'
 import 'animate.css'
 
 // google analytics
-import { useEffect } from 'react'
+import {useEffect, useState} from 'react'
 import { useRouter } from 'next/router'
 import {ga_measurement_id, pageview} from '../lib/google-analytics'
 import smartlookClient from "smartlook-client";
 // /google analytics
 
-export const smartlookId = process.env.SMARTLOOK_API_ID
+export const smartlookId = 'b889c9be6a643ce3cc23e6f90e97c13830183ab5'
 function MyApp({ Component, pageProps }) {
   // google analytics
   // will log page views on route change if new routes are added
   const router = useRouter()
+    const[loaded, setLoaded] = useState(false)
   useEffect(() => {
-      smartlookClient.init(smartlookId, {region: 'us'});
+      if(!loaded){
+          smartlookClient.init(smartlookId, {region: 'us'});
+          
+          setLoaded(true)
+      }
     if (!ga_measurement_id) return
     const handleRouteChange = (url) => pageview(url)
     router.events.on('routeChangeComplete', handleRouteChange)
