@@ -3,6 +3,8 @@ import Hyphenated from 'react-hyphen'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import { about } from '../data/portfolio'
+import Image from "next/image";
+
 
 const About = () => {
   const { name, role, company, description, resume, social, greetingEmoji, img } =
@@ -14,7 +16,7 @@ const About = () => {
       <div className='about__pseudo-padding about__pseudo-padding-top' />
 
       {img && (<>
-        <img src={img} height={'300px'}/>
+        <img className='animate__animated animate__fadeIn animate__delay-0.5s' src={img} />
       </>)}
 
       {firstName && (
@@ -26,7 +28,7 @@ const About = () => {
       )}
       
       {role && (
-        <h1 className='about__role animate__animated animate__fadeInUp animate__delay-3s'>
+        <h1 className='about__role animate__animated animate__fadeInUp animate__delay-2s'>
           I&apos;m a {role}
           {company && (
             <span>
@@ -38,7 +40,7 @@ const About = () => {
         </h1>
       )}
 
-      <div className='animate__animated animate__fadeIn animate__delay-5s'>
+      <div className='animate__animated animate__fadeInUp animate__delay-2s'>
         {description && (
           <div className='about__desc paragraph__list'>
             <Hyphenated>

@@ -3,7 +3,7 @@ const about = {
   // each element in the description array is a paragraph
   name: 'Michael Bowen',
   role: 'Game Programmer',
-  company: 'Champlain College '23',
+  company: 'Champlain College \'23',
   description: [
     'Graduating in May 2023 with a focus in game CI/CD, extended reality, physics programming.',
   ],
@@ -40,10 +40,10 @@ const projects = [
     livePreview: 'https://docs.google.com/presentation/d/1pGFhkVGUu52NhdT-uWjjTgoqjUhPl1Ncy2UQMJzD5Ig/edit?usp=sharing',
   },
   {
-    thumbnail: 'https://michael-bowen.com/portfolio/projects/spartakids',
+    thumbnail: 'https://michael-bowen.com/spartakids-thumbnail.png',
     name: 'Spartakids',
     description: [
-      'Spartakids was developer as a part of the 2022 Ubisoft Game Lab Competition. The theme for the year was 'Student XP'. Our interpretation of the theme lead us to a co-op boss fighter about the magic of play.',
+      'Spartakids was developer as a part of the 2022 Ubisoft Game Lab Competition. The theme for the year was \'Student XP\'. Our interpretation of the theme lead us to a co-op boss fighter about the magic of play.',
     ],
     stack: ['Unity', 'C#', 'Timeline', 'RTPC'],
     livePreview: 'https://larnio.itch.io/spartakids',

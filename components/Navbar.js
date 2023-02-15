@@ -44,7 +44,7 @@ const Navbar = () => {
 
   return (
     <nav className={`center nav ${scrolled ? 'shadow' : ''}`}>
-      <div className='nav__content animate__animated animate__fadeIn animate__delay-5s'>
+      <div className='nav__content animate__animated animate__fadeIn animate__delay-2s'>
         <ul
           style={{ display: showNavList ? 'flex' : null }}
           className='nav__list'
