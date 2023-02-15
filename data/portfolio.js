@@ -3,7 +3,7 @@ const about = {
   // each element in the description array is a paragraph
   name: 'Michael Bowen',
   role: 'Game Programmer',
-  company: 'Champlain College 23',
+  company: 'Champlain College '23',
   description: [
     'Graduating in May 2023 with a focus in game CI/CD, extended reality, physics programming.',
   ],
@@ -37,28 +37,25 @@ const projects = [
       'The Turbo Hybrid Game Engine was created to understand what it takes to build a game engine from scratch and appreciate some core systems. Structure of Arrays component systems, Data driven game objects and 3D rendering were key design goals for this engine.',
     ],
     stack: ['C++', 'SDL2', 'bgfx' ],
-    sourceCode: 'Spartakids',
     livePreview: 'https://docs.google.com/presentation/d/1pGFhkVGUu52NhdT-uWjjTgoqjUhPl1Ncy2UQMJzD5Ig/edit?usp=sharing',
   },
   {
-    thumbnail: 'images/placeholder-image.jpeg',
+    thumbnail: 'https://michael-bowen.com/portfolio/projects/spartakids',
     name: 'Spartakids',
     description: [
-      'Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam',
+      'Spartakids was developer as a part of the 2022 Ubisoft Game Lab Competition. The theme for the year was 'Student XP'. Our interpretation of the theme lead us to a co-op boss fighter about the magic of play.',
     ],
-    stack: ['SASS', 'TypeScript', 'React'],
-    sourceCode: 'https://github.com',
-    livePreview: 'https://github.com',
+    stack: ['Unity', 'C#', 'Timeline', 'RTPC'],
+    livePreview: 'https://larnio.itch.io/spartakids',
   },
   {
-    thumbnail: 'images/placeholder-image.jpeg',
-    name: 'Project 4',
+    thumbnail: 'https://michael-bowen.com/well-being-thumbnail.png',
+    name: 'Olfactory VR Meditation',
     description: [
-      'Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam',
+      'Worked with Champlain College and Ion Technologies to integrate the Ion scent device into an immersive VR meditation experience. Developed for a study on how immersive technologies can be used to enhance well being',
     ],
-    stack: ['SASS', 'TypeScript', 'React'],
-    sourceCode: 'https://github.com',
-    livePreview: 'https://github.com',
+    stack: ['Pico Neo 2', 'Unity Interaction Toolkit', 'Android', 'Ion Scen'],
+    livePreview: 'https://drive.google.com/file/d/1mn-pmESa-8kyll-9QarV-EdaCwwexoFB/view?usp=sharing',
   },
 ]
 
