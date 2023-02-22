@@ -1,10 +1,10 @@
 import uniqid from 'uniqid'
 import ProjectCard from './ProjectCard'
 import Spacer from './Spacer'
-import { projects } from '../data/portfolio'
+import { ProjectsData } from '../data/portfolio'
 
 const Projects = () => {
-  if (!projects.length) return null
+  if (!ProjectsData.length) return null
 
   return (
     <section id='projects' className='section projects'>
@@ -12,7 +12,7 @@ const Projects = () => {
       <h2 className='section__title'>Projects</h2>
 
       <div className='projects__grid'>
-        {projects.map((project) => (
+        {ProjectsData.map((project) => (
           <ProjectCard key={uniqid()} project={project} />
         ))}
       </div>

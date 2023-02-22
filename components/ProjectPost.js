@@ -1,14 +1,12 @@
 import uniqid from 'uniqid'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import LaunchIcon from '@material-ui/icons/Launch'
-import {skills} from "../data/portfolio";
 
 const ProjectCard = ({ project }) => (
   <div className='project'>
     <div>
       {project.thumbnail && (
         <img
-          className='project__thumbnail'
           src={project.thumbnail}
           alt='thumbnail'
         />
@@ -47,27 +45,6 @@ const ProjectCard = ({ project }) => (
           <GitHubIcon />
         </a>
       )}
-
-      {project.livePreview && (
-        <a
-          href={project.livePreview}
-          target='_blank'
-          rel='noreferrer'
-          aria-label='live preview'
-          className='link link--icon'
-        >
-          <LaunchIcon />
-        </a>
-      )}
-        {project.href && (
-            <ul className='skills__list'>
-                <a href={project.href}>
-                    <li key={uniqid()} className=' btn btn--plain'>
-                        Learn More
-                    </li>
-                </a>
-            </ul>
-        )}
         
     </div>
   </div>

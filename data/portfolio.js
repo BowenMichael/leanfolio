@@ -16,11 +16,12 @@ const about = {
   greetingEmoji: '👋',
 }
 
-const projects = [
+const ProjectsData = [
   // projects can be added and removed
   // if there are no projects, Projects section won't show up
   // each element in the description array is a paragraph
   {
+    href : 'dead-pedal',
     thumbnail: 'https://michael-bowen.com/DeadPedal-2.png',
     name: 'Dead Pedal',
     description: [
@@ -31,15 +32,18 @@ const projects = [
     livePreview: 'https://larnio.itch.io/dead-pedal',
   },
   {
+    href : 'turbo-hybrid',
     thumbnail: 'https://michael-bowen.com/images/turbo-hybrid-cube.gif',
     name: 'Turbo-Hybrid Game Engine',
     description: [
       'The Turbo Hybrid Game Engine was created to understand what it takes to build a game engine from scratch and appreciate some core systems. Structure of Arrays component systems, Data driven game objects and 3D rendering were key design goals for this engine.',
     ],
     stack: ['C++', 'SDL2', 'bgfx' ],
+    sourceCode: 'https://github.com/BowenMichael/Turbo-Hybrid-Game-Engine',
     livePreview: 'https://docs.google.com/presentation/d/1pGFhkVGUu52NhdT-uWjjTgoqjUhPl1Ncy2UQMJzD5Ig/edit?usp=sharing',
   },
   {
+    href : 'spartakids',
     thumbnail: 'https://michael-bowen.com/spartakids-thumbnail.png',
     name: 'Spartakids',
     description: [
@@ -49,6 +53,7 @@ const projects = [
     livePreview: 'https://larnio.itch.io/spartakids',
   },
   {
+    href : 'olfactory-VR',
     thumbnail: 'https://michael-bowen.com/well-being-thumbnail.png',
     name: 'Olfactory VR Meditation',
     description: [
@@ -77,7 +82,7 @@ const skills = [
 
 const contact = {
   // email is optional - if left empty Contact section won't show up
-  email: 'michael@thebowenfamily.com',
+  email: 'https://www.linkedin.com/in/bowen-michael/',
 }
 
-export { about, projects, skills, contact }
+export { about, ProjectsData, skills, contact }

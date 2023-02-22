@@ -4,7 +4,7 @@ import WbSunnyRoundedIcon from '@material-ui/icons/WbSunnyRounded'
 import MenuIcon from '@material-ui/icons/Menu'
 import CloseIcon from '@material-ui/icons/Close'
 import { ThemeContext } from '../contexts/theme'
-import { about, projects, skills, contact } from '../data/portfolio'
+import { about, ProjectsData, skills, contact } from '../data/portfolio'
 
 const Navbar = () => {
   const [{ themeName, toggleTheme }] = useContext(ThemeContext)
@@ -44,23 +44,23 @@ const Navbar = () => {
 
   return (
     <nav className={`center nav ${scrolled ? 'shadow' : ''}`}>
-      <div className='nav__content animate__animated animate__fadeIn animate__delay-2s'>
+      <div className='nav__content animate__animated animate__fadeIn animate__delay-0s'>
         <ul
           style={{ display: showNavList ? 'flex' : null }}
           className='nav__list'
         >
           <li className='nav__list-item'>
             <strong>
-              <a href='#top' onClick={hideNavList} className='link'>
+              <a href='/#top' onClick={hideNavList} className='link'>
                 {name || 'About Me'}
               </a>
             </strong>
           </li>
 
-          {projects.length && (
+          {ProjectsData.length && (
             <li className='nav__list-item'>
               <a
-                href='#projects'
+                href='/#projects'
                 onClick={hideNavList}
                 className='link link--nav'
               >
@@ -72,7 +72,7 @@ const Navbar = () => {
           {skills.length && (
             <li className='nav__list-item'>
               <a
-                href='#skills'
+                href='/#skills'
                 onClick={hideNavList}
                 className='link link--nav'
               >
@@ -84,7 +84,7 @@ const Navbar = () => {
           {contact.email && (
             <li className='nav__list-item'>
               <a
-                href='#contact'
+                href='/#contact'
                 onClick={hideNavList}
                 className='link link--nav'
               >
