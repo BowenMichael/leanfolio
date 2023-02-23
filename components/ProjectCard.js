@@ -23,6 +23,7 @@ const ProjectCard = ({ project }) => (
           ))}
         </div>
       )}
+       
     </div>
 
     <div>
@@ -59,15 +60,17 @@ const ProjectCard = ({ project }) => (
           <LaunchIcon />
         </a>
       )}
-        {project.href && (
-            <ul className='skills__list'>
-                <a href={project.href}>
+        {project.href && (<>
+            <br/>
+            <br/>
+            <ol className='skills__list'>
+                <a href={'/projects/'+project.href}>
                     <li key={uniqid()} className=' btn btn--plain'>
                         Learn More
                     </li>
                 </a>
-            </ul>
-        )}
+            </ol>
+        </>)}
         
     </div>
   </div>

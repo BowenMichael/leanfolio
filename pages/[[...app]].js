@@ -33,7 +33,7 @@ function App() {
 
       <main>
         <About />
-        <div className='animate__animated animate__fadeInUp animate__delay-2s'>
+        <div className={`${window.location.href === '#projects' || '#skills' || '#contact' ? '' : 'animate__animated animate__fadeInUp animate__delay- 2s'}`}>
           <Projects />
           <Skills />
           <Contact />

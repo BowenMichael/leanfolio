@@ -26,9 +26,19 @@ const ProjectsData = [
     name: 'Dead Pedal',
     description: [
       'Dead pedal is a third person driving action game.',
-      'Personal Contributions: \nDrove development of custom car physics that can interface with AI, Audio systems, and Blueprints. Setup automated tools to support continuous integration practices with Google Cloud and Jenkins. Supported the team by documenting best practices to interact with Unreal Engine and Git.',
+      'Built in Unreal Engine 5 Dead Pedal is the culmination of 4 year of cross-disciplinary skills and study. On a team of 12 and under development for the 2022 academic year Dead Pedal brings together all aspects of game development.',
+      'Planned Steam Release 2023.'
+    ],
+    focus:[
+        'As Lead Programmer it is important that I have an understanding of all core programming systems and can communicate them to the rest of the team',
+        'I built pipelines that made showing off the build as simple as entering a url into a webpage',
+        'Created a car model from scratch to give a high degree of control to the design team',
     ],
     stack: ['Unreal 5', 'Git', 'Jenkins', 'Google Cloud', 'Lead Programmer'],
+    details: [
+      'Drove development of custom car physics that can interface with AI, Audio systems, and Blueprints. Setup automated tools to support continuous integration practices with Google Cloud and Jenkins. Supported the team by documenting best practices to interact with Unreal Engine and Git.',
+
+    ],
     livePreview: 'https://larnio.itch.io/dead-pedal',
   },
   {
@@ -39,6 +49,7 @@ const ProjectsData = [
       'The Turbo Hybrid Game Engine was created to understand what it takes to build a game engine from scratch and appreciate some core systems. Structure of Arrays component systems, Data driven game objects and 3D rendering were key design goals for this engine.',
     ],
     stack: ['C++', 'SDL2', 'bgfx' ],
+    details: [''],
     sourceCode: 'https://github.com/BowenMichael/Turbo-Hybrid-Game-Engine',
     livePreview: 'https://docs.google.com/presentation/d/1pGFhkVGUu52NhdT-uWjjTgoqjUhPl1Ncy2UQMJzD5Ig/edit?usp=sharing',
   },
@@ -50,6 +61,7 @@ const ProjectsData = [
       'Spartakids was developer as a part of the 2022 Ubisoft Game Lab Competition. The theme for the year was \'Student XP\'. Our interpretation of the theme lead us to a co-op boss fighter about the magic of play.',
     ],
     stack: ['Unity', 'C#', 'Timeline', 'RTPC'],
+    details: [''],
     livePreview: 'https://larnio.itch.io/spartakids',
   },
   {
@@ -60,6 +72,7 @@ const ProjectsData = [
       'Worked with Champlain College and Ion Technologies to integrate the Ion scent device into an immersive VR meditation experience. Developed for a study on how immersive technologies can be used to enhance well being',
     ],
     stack: ['Pico Neo 2', 'Unity Interaction Toolkit', 'Android', 'Ion Scen'],
+    details: [''],
     livePreview: 'https://drive.google.com/file/d/1mn-pmESa-8kyll-9QarV-EdaCwwexoFB/view?usp=sharing',
   },
 ]
