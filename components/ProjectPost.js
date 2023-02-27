@@ -1,6 +1,17 @@
 import uniqid from 'uniqid'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import LaunchIcon from '@material-ui/icons/Launch'
+import ReactMarkdown from 'react-markdown'
+import React from 'react'
+import rehypeRaw from 'rehype-raw'
+import {CopyBlock, dracula} from "react-code-blocks";
+import react from "react";
+import {MapPortfolioDataArray, MapProjectStack} from "../scripts/util";
+import * as PropTypes from "prop-types";
+const util = require('util')
+
+
+
 
 const ProjectCard = ({ project }) => (
   <div className='project'>
@@ -21,42 +32,20 @@ const ProjectCard = ({ project }) => (
 
     <div>
       {project.stack && (
-        <ul className='project__stack'>
-          {project.stack.map((item) => (
-            <li key={uniqid()} className='project__stack-item'>
-              {item}
-            </li>
-          ))}
-        </ul>
+        <MapProjectStack stack={project.stack} />
       )}
             
         {project.details && (<>
             <h2>Details</h2>
             {project.description && (
                 <div className='project__description paragraph__list'>
-                    {project.description.map((item) => (
-                        <p key={uniqid()}>{item}</p>
-                    ))}
+                    <MapPortfolioDataArray dataArray={project.description}/>
                 </div>
             )}
-            <div className={'details'}>
-                {project.focus && (<>
-                    <h4>My Focii</h4>
-                    <ul>
-                        {project.focus.map((item) => (
-                            <li>{item}</li>
-                        ))}
-                    </ul>
-                </>)}
-                
+            <div className={'details'}>            
                 <div className='project__description paragraph__list'>
-                    {project.details.map((item) => (
-                        <p>{item}</p>
-                    ))}
+                    <MapPortfolioDataArray dataArray={project.details}/>
                 </div>
-                
-
-                
             </div>
         </>)}
         {project.sourceCode && (
