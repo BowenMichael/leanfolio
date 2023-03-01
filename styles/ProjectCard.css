@@ -20,6 +20,25 @@
   justify-content: space-between;
 }
 
+.project__Post {
+  margin-top: 3rem;
+
+}
+
+.project__Post a  {
+  text-decoration: underline !important;
+}
+
+.project__image-container{
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+}
+
+.project__image {
+  text-align: center;
+}
+
 .project:hover {
   transform: translateY(-7px);
 }

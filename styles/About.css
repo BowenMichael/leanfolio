@@ -11,6 +11,10 @@
   flex: 1;
 }
 
+.about__image {
+  border-radius: 5rem;
+}
+
 .about__pseudo-padding-top {
   min-height: 5rem;
 }
