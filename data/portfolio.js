@@ -94,12 +94,11 @@ const about = {
   // each element in the description array is a paragraph
   name: 'Michael Bowen',
   role: 'Game Programmer',
-  company: 'Champlain College \'23',
   description: [
     'Graduating in May 2023 with a focus in game CI/CD, extended reality, physics programming.',
   ],
   img : 'https://michael-bowen.com/michaelSmaller.png',
-  resume: '/resumes/Michael-Bowen_Resume_01-05-23.pdf',
+  resume: '/Resumes/Michael_Bowen_Resume_03-10-2023.pdf',
   social: {
     linkedin: 'https://www.linkedin.com/in/bowen-michael/',
     github: 'https://github.com/BowenMichael',
@@ -256,19 +255,26 @@ const ProjectsData = [
 ]
 
 const skills = [
-  // skills can be added or removed
-  // if there are no skills, Skills section won't show up
-  'C++',
-  'C#',
-  'TypeScript',
-  'Unity',
-  'Unreal 5',
-  'Google Cloud',
-  'Jenkins',
-  'React',
-  'Git',
-  'GitHub Actions',
-  'CI/CD',
+    // skills can be added or removed
+    // if there are no skills, Skills section won't show up
+    'C++',
+    'C#',
+    'Unity',
+    'Unreal Engine',
+    'Git',
+    'CI/CD',
+    'Google Cloud',
+    'Jenkins',
+    'GitHub Actions',
+    'Car AI',
+    'VR',
+    'OpenXR',
+    'Oculus Hand-Tracking',
+    'SDL2',
+    'bgfx',
+    'Next.js',
+    'TypeScript',
+    'React',
 ]
 
 const contact = {
@@ -276,8 +282,4 @@ const contact = {
   email: 'https://www.linkedin.com/in/bowen-michael/',
 }
 
-
-
 export { about, ProjectsData, skills, contact }
-
-
