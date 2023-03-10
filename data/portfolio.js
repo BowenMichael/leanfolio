@@ -95,7 +95,7 @@ const about = {
   name: 'Michael Bowen',
   role: 'Game Programmer',
   description: [
-    'Graduating in May 2023 with a focus in game CI/CD, extended reality, physics programming.',
+    'Graduating in May 2023 with a focus in game CI/CD, physics, and VR programming.',
   ],
   img : 'https://michael-bowen.com/michaelSmaller.png',
   resume: '/Resumes/Michael_Bowen_Resume_03-10-2023.pdf',
@@ -120,7 +120,8 @@ const ProjectsData = [
       'Planned Steam Release 2023.'
     ],
     stack: ['Unreal 5', 'Git', 'Jenkins', 'Google Cloud', 'Lead Programmer'],
-    details: [
+    details: [        
+        '<iframe width="100%" height="315" src="https://www.youtube.com/embed/hmdd7PEL4Rg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
       '### My Focus' +
       '\n* As Lead Programmer it is important that I have an understanding of all core programming systems and can ' +
       'communicate them to the rest of the team' +
@@ -138,6 +139,8 @@ const ProjectsData = [
       '\n\n ',
       '<div className="project__image-container"><img className="project__image" src="/projects/dead-pedal/jenkins-build-success.PNG" alt="Markdown Monster icon" width="50%"  /></div>',
       '<div className="project__image-container"><img className="project__image" src="/projects/dead-pedal/change-log.PNG" alt="Markdown Monster icon" width="100%"  /></div>',
+        '',
+        
     ],
     livePreview: 'https://larnio.itch.io/dead-pedal',
   },
@@ -189,13 +192,55 @@ const ProjectsData = [
     livePreview: 'https://docs.google.com/presentation/d/1pGFhkVGUu52NhdT-uWjjTgoqjUhPl1Ncy2UQMJzD5Ig/edit?usp=sharing',
   },
   {
+    href : 'hand-tracking-vr',
+    thumbnail: '/images/hand-tracking/thumbnail.png',
+    name: 'Oculus Hand Tracking Demo',
+    description: [
+      'Oculus Hand tracking demo. This game was created on a team of 4. I was responsible for delivering hand tracking integration into the game. Took spell systems and adapted them for Oculus VR hand controls. This included Input poses, adapted throwing to a shoot, and alternate locomotion.',
+    ],
+    stack: ['VR', 'Unity', 'Oculus Quest 2', 'Oculus Hand Tracking', 'Unity VR', 'Hand Pose inputs', 'Hand tracking design'],
+    details: ['### Demo Video',
+    '<iframe src="https://drive.google.com/file/d/14NW3659T9bssBLZm8n4agDkqIjrP9HCC/preview" width="100%" height="360" allow="autoplay"></iframe>',
+    ''],
+    livePreview: 'https://drive.google.com/file/d/14NW3659T9bssBLZm8n4agDkqIjrP9HCC/view?usp=sharing',
+  },
+
+  {
+    href : 'olfactory-VR',
+    thumbnail: 'https://michael-bowen.com/well-being-thumbnail.png',
+    name: 'Olfactory VR Meditation',
+    description: [
+      'Worked with Ion Technologies to integrate the Ion scent device into an immersive VR meditation experience. Developed for a study on how immersive technologies can be used to enhance well being',
+      
+    ],
+    stack: ['Pico Neo 2', 'Unity Interaction Toolkit', 'Android', 'Ion Scen'],
+    details: ['### Live Demo',
+      '<iframe src="https://drive.google.com/file/d/1mn-pmESa-8kyll-9QarV-EdaCwwexoFB/preview" width="100%" height="480" allow="autoplay"></iframe>',],
+    livePreview: 'https://drive.google.com/file/d/1mn-pmESa-8kyll-9QarV-EdaCwwexoFB/view?usp=sharing',
+  },
+  {
+    href : 'boat-combat',
+    thumbnail: '/images/boat-combat/thumbnail.png',
+    name: 'Boat Combat',
+    description: [
+      'A mobile networked boat combat game about taking over points in the arena.\n ' +
+      'Using accelerometer or touch controls the player takes on an opponent in a 1v1 experience. ' +
+      'This game was an opportunity to develop skills in mobile and networked development.',
+    ],
+    stack: ['Mobile', 'Unity', 'Networking', '1v1', 'Accelerometer', 'Objectives', 'Gameplay'],
+    details: ['### Demo Video',
+      '<iframe src="https://drive.google.com/file/d/16AJ3fHggciywTfD9s9z9kTts-QXjJOT4/preview" width="100%" height="360" allow="autoplay"></iframe>',
+      ''],
+    livePreview: 'https://drive.google.com/file/d/16AJ3fHggciywTfD9s9z9kTts-QXjJOT4/view?usp=sharing',
+  },
+  {
     href : 'spartakids',
     thumbnail: 'https://michael-bowen.com/spartakids-thumbnail.png',
     name: 'Spartakids',
     description: [
       'Spartakids was developer as a part of the 2022 Ubisoft Game Lab Competition. The theme for the year was \'Student XP\'. Our interpretation of the theme lead us to a co-op boss fighter about the magic of play.',
     ],
-    stack: ['Unity', 'C#', 'Timeline', 'RTPC'],
+    stack: ['Unity', 'Networking', 'UI', 'Networked Events', 'Gameplay'],
     details: ['<div className="project__image-container"><img className="project__image about__image" src="https://michael-bowen.com/spartakids-logo-2.png" alt="Markdown Monster icon" width="100%"  /></div>',
     'Spartakids is a co-op third-person boss fighting game developed for the 2022 Ubisoft Game Lab Competition. The game takes on the student experience as seen through the lens of play and imagination. You and your friend take on your imaginary monster during recess. Fight with your marker sword or compass bow to take down Spike. Make sure when the floor turns to lava to take to higher ground on top of the jungle gym. You and your friend trade weapons on top of the dome so make sure that you trading your perks so they are most effective.\n' +
     '\n',
@@ -241,17 +286,8 @@ const ProjectsData = [
     'This project contained a lot of scope for a 10-week prototype. The networking, animations and general game feel were all areas that could have taken 10 weeks on there own. In this article I go into the struggles of learning networking while under specific time constraints, trying to work the student experience into an existing game idea, and reflecting on the competition. Working on a project like this without knowing networking presented some architectural pitfalls that were made obvious when data had to be sent over a network. Simple attacks and moving things across an inventory needed to be clear and serializable to communicate and display world events across a network.'*/],
     livePreview: 'https://larnio.itch.io/spartakids',
   },
-  {
-    href : 'olfactory-VR',
-    thumbnail: 'https://michael-bowen.com/well-being-thumbnail.png',
-    name: 'Olfactory VR Meditation',
-    description: [
-      'Worked with Champlain College and Ion Technologies to integrate the Ion scent device into an immersive VR meditation experience. Developed for a study on how immersive technologies can be used to enhance well being',
-    ],
-    stack: ['Pico Neo 2', 'Unity Interaction Toolkit', 'Android', 'Ion Scen'],
-    details: [''],
-    livePreview: 'https://drive.google.com/file/d/1mn-pmESa-8kyll-9QarV-EdaCwwexoFB/view?usp=sharing',
-  },
+  
+
 ]
 
 const skills = [

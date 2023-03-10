@@ -16,7 +16,7 @@ const About = () => {
       <div className='about__pseudo-padding about__pseudo-padding-top' />
 
       {img && (<>
-        <img className='animate__animated animate__fadeIn animate__delay-0.5s about__image' src={img} />
+        <img className='animate__animated animate__fadeInUp animate__delay-1s about__image' src={img} />
       </>)}
 
       {firstName && (

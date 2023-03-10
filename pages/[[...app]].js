@@ -10,19 +10,23 @@ import {ThemeContext} from "../contexts/theme";
 
 function App() {
     const [isMounted, setIsMounted] = useState(false)
+    const [loaded, setloaded] = useState(false)
     const [{ themeName }] = useContext(ThemeContext)
     
     useEffect(() => {
         const oldThemeName = themeName === 'dark' ? 'light' : 'dark'
         document.body.classList.remove(oldThemeName)
         document.body.classList.add(themeName)
+        if(!loaded){
+            setloaded(true);
+        }
     }, [themeName])
 
     useEffect(() => {
         setIsMounted(true)
     }, [])
 
-    if (!isMounted) {
+    if (!isMounted || !loaded) {
         return null
     }
 
@@ -33,8 +37,8 @@ function App() {
       <main>
         <About />
         <div className={`${window.location.href === '#projects' || '#skills' || '#contact' ? '' : 'animate__animated animate__fadeInUp animate__delay- 2s'}`}>
-            <Skills />
             <Projects />
+            <Skills />
             <Contact />
         </div>
       </main>
