@@ -98,7 +98,7 @@ const about = {
     'Graduating in May 2023 with a focus in game CI/CD, physics, and VR programming.',
   ],
   img : 'https://michael-bowen.com/michaelSmaller.png',
-  resume: '/Resumes/Michael_Bowen_Resume_03-10-2023.pdf',
+  resume: '/Resumes/Michael_Bowen_Resume_03-13-23.pdf',
   social: {
     linkedin: 'https://www.linkedin.com/in/bowen-michael/',
     github: 'https://github.com/BowenMichael',
