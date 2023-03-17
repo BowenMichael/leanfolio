@@ -115,31 +115,55 @@ const ProjectsData = [
     thumbnail: 'https://michael-bowen.com/DeadPedal-2.png',
     name: 'Dead Pedal',
     description: [
-      'Dead pedal is a third person driving action game.',
+      'In Dead Pedal you play as John D. Pedal in a post apocalyptic world fending of ruthless marauders and mutant beasts. ' +
+      'Upgrade you car with new weapons and customizations by taking out various factions. When your ready take on THE WORM and bring peace back to the mojave.',
       'Built in Unreal Engine 5 Dead Pedal is the culmination of 4 year of cross-disciplinary skills and study. On a team of 12 and under development for the 2022 academic year.',
       'Planned Steam Release 2023.'
     ],
-    stack: ['Unreal 5', 'Git', 'Jenkins', 'Google Cloud', 'Lead Programmer'],
+    stack: ['Lead Programmer', 'UE5', 'Git', 'Jenkins', 'Google Cloud'],
     details: [        
         '<iframe width="100%" height="315" src="https://www.youtube.com/embed/hmdd7PEL4Rg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
-      '### My Focus' +
-      '\n* As Lead Programmer it is important that I have an understanding of all core programming systems and can ' +
-      'communicate them to the rest of the team' +
-      '\n* I built pipelines that made showing off the build as simple as entering a url into a webpage ' +
-      '\n* Created a car model from scratch to give a high degree of control to the design team',
-      '### Overview' +
-      '\nDrove development of custom car physics that can interface with AI, Audio systems, and Blueprints. Setup ' +
-      'automated tools to support continuous integration practices with Google Cloud and Jenkins. Supported the team ' +
-      'by documenting best practices to interact with Unreal Engine and Git.',
-      '### Google Cloud' +
+      '### My Focus',
+      '\n* Take on responsibility for the game\'s programming vision and execution as Lead Programmer' +
+      '\n* Automate build pipeline and maintain repository structure' +
+      '\n* Build a custom car model that can interface with AI, Audio systems, and can adapt to design goals',
+      '### Overview',
+      '\n Starting in the Fall of 2022 we began development of Dead Pedal. ' +
+      'Created with in the Champlain College Game Studio we assembled a cross-disciplinary team to develop a new game.' +
+      'We new we wanted to create a game utilizing Unreal Engine 5. ' +
+      'We eventually settled on bring one of our previous 2D games(Dead Pedal: Drifting) into full 3D.'+
+      ' We began to get to work understanding the new engine and setting up our build pipelines. ' +
+      '### Google Cloud',
       '\nUtilizing Jenkins and Google Cloud I created an automated build server. This saved hours of programming ' +
       'time and allowed us to show off the build in less than 60 seconds. By integrating an RSS change log with discord, ' +
-      'Jenkins build webhooks, and google bucket integration allowed dowload links to be displayed direcly in discord. ' +
+      'Jenkins build webhooks, and google bucket integration allowed download links to be displayed directly in discord. ' +
       'This also make it very clear which commits were in which build because the change-log is displayed right next to the build.' +
       '\n\n ',
-      '<div className="project__image-container"><img className="project__image" src="/projects/dead-pedal/jenkins-build-success.PNG" alt="Markdown Monster icon" width="50%"  /></div>',
+        '### Automated Build notification',
+        'By integrating the discord plugin with Jenkins we were able to send a message to discord when a build was complete. This gave the team a clear understanding of the state of the build along with direct access. This also acted as a log for any issues that broke the build. ' +
+        'By creating discord threads for any error that cause the build to fail we were able to keep track of what error caused the failure without leaving discord. \n\n' +
+        'Having the Jenkins messages inside of discord is really important to decrease communication bottlenecks. Also having a public record keeps problems from being hidden away on someones personal laptop.',
+      '<div className="project__image-container"><img className="project__image" src="/projects/dead-pedal/jenkins-build-success.PNG" alt="Markdown Monster icon" width="100%"  /></div>',
+        '### RSS Change log',
+        'In conjunction with the build notifications we leveraged RSS to keep track of our commits. Showing a clear build history allows us to quickly identify what work gets into the build and what we may still be waiting on.',
       '<div className="project__image-container"><img className="project__image" src="/projects/dead-pedal/change-log.PNG" alt="Markdown Monster icon" width="100%"  /></div>',
-        '',
+        '### Car Physics',
+        'For any driving game car physics is a vital component. In the Fall we discussed two paths for car physics.' +
+        ' The first was to use Unreal Engine\'s chaos driving physics. The second was to take on the risk of building our own physics model.', 
+        ' We decided to build our own physics engine because we found while highly realistic Unreal\'s implementation had a immense number of parameters and would be a nightmare to tune. ' +
+        'So instead we set out to create our own model that would maintain a level of realistic feel but would simple enough to tune to our liking. ' +
+        'This allowed us to cater the physics to the design rather than the other way around. ',
+        'An example of this is we were testing two different models one used a forward force vector ' +
+        'to move forward and a rotation along the vertical axis. This resulted in a very whimsical ' +
+        'drifting driving style. The other behaved like a car on rails and was really good for making ' +
+        'quick turns at high speed. Because we had a deep understanding of the driving we were able to ' +
+        'toggle between these two modes giving the player the ability to decide which driving mode suits them best. '+
+        'I believe that without taking this approach we would have been stuck with driving that while felt realistic it ' +
+        'would not be able to synergize with the rest of the game.',
+        '### To be continued...',
+        ' I would like to go into more detail and do a full ' +
+        'retrospective after the game comes out on this system in particular. If you would be interested feel free to ' +
+        'reach out. I would love to go into more detail.',
         
     ],
     livePreview: 'https://larnio.itch.io/dead-pedal',
@@ -213,7 +237,7 @@ const ProjectsData = [
       'Worked with Ion Technologies to integrate the Ion scent device into an immersive VR meditation experience. Developed for a study on how immersive technologies can be used to enhance well being',
       
     ],
-    stack: ['Pico Neo 2', 'Unity Interaction Toolkit', 'Android', 'Ion Scen'],
+    stack: ['Pico Neo 2', 'Unity Interaction Toolkit', 'Android', 'Ion Scent'],
     details: ['### Live Demo',
       '<iframe src="https://drive.google.com/file/d/1mn-pmESa-8kyll-9QarV-EdaCwwexoFB/preview" width="100%" height="480" allow="autoplay"></iframe>',],
     livePreview: 'https://drive.google.com/file/d/1mn-pmESa-8kyll-9QarV-EdaCwwexoFB/view?usp=sharing',
