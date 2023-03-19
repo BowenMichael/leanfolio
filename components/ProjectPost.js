@@ -12,6 +12,7 @@ const ProjectCard = ({ project }) => (
             <img
               src={project.thumbnail}
               alt='thumbnail'
+              width='100%'
             />
           )}
         </div>
@@ -28,7 +29,7 @@ const ProjectCard = ({ project }) => (
                         <MapPortfolioDataArray dataArray={project.description}/>
                     </div>
                 )}
-                <div className={'details'}>            
+                <div className={'details'}>
                     <div className='project__description paragraph__list'>
                         <MapPortfolioDataArray dataArray={project.details}/>
                     </div>
@@ -55,7 +56,7 @@ const ProjectCard = ({ project }) => (
                 >
                     <LaunchIcon />
                 </a>
-            )} 
+            )}
                 
             
             

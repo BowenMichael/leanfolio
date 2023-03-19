@@ -1,4 +1,4 @@
-import {CopyBlock, dracula} from "react-code-blocks";
+;import {CopyBlock, dracula} from "react-code-blocks";
 
 const mainRenderFunction = '' +
       '    /*\n' +
@@ -115,24 +115,18 @@ const ProjectsData = [
     thumbnail: 'https://michael-bowen.com/DeadPedal-2.png',
     name: 'Dead Pedal',
     description: [
+        'As Lead Programmer I maintained a Unreal CI/CD pipeline, creating and itertating our car physics, as well as establishing the programming team\'s feature timeline.'
+        ],
+    stack: ['Lead Programmer', 'UE5', 'Git', 'Jenkins', 'Google Cloud'],
+    details: ['### The Game',
       'In Dead Pedal you play as John D. Pedal in a post apocalyptic world fending of ruthless marauders and mutant beasts. ' +
       'Upgrade you car with new weapons and customizations by taking out various factions. When your ready take on THE WORM and bring peace back to the mojave.',
-      'Built in Unreal Engine 5 Dead Pedal is the culmination of 4 year of cross-disciplinary skills and study. On a team of 12 and under development for the 2022 academic year.',
-      'Planned Steam Release 2023.'
-    ],
-    stack: ['Lead Programmer', 'UE5', 'Git', 'Jenkins', 'Google Cloud'],
-    details: [        
+      'Planned Steam release May 2023.',
         '<iframe width="100%" height="315" src="https://www.youtube.com/embed/hmdd7PEL4Rg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
-      '### My Focus',
-      '\n* Take on responsibility for the game\'s programming vision and execution as Lead Programmer' +
-      '\n* Automate build pipeline and maintain repository structure' +
-      '\n* Build a custom car model that can interface with AI, Audio systems, and can adapt to design goals',
-      '### Overview',
-      '\n Starting in the Fall of 2022 we began development of Dead Pedal. ' +
-      'Created with in the Champlain College Game Studio we assembled a cross-disciplinary team to develop a new game.' +
-      'We new we wanted to create a game utilizing Unreal Engine 5. ' +
-      'We eventually settled on bring one of our previous 2D games(Dead Pedal: Drifting) into full 3D.'+
-      ' We began to get to work understanding the new engine and setting up our build pipelines. ' +
+      '### Timeline',
+      'Starting development in September 2022 I worked on a cross-disiplanry team of developers to create Dead Pedal for the Champlain College Game studio.',
+      'We made the decision to learn Unreal Engine 5 to utilize Chaos Physics, World Partition and leverage Unreal\'s rendering.',
+      '## Technical Details',
       '### Google Cloud',
       '\nUtilizing Jenkins and Google Cloud I created an automated build server. This saved hours of programming ' +
       'time and allowed us to show off the build in less than 60 seconds. By integrating an RSS change log with discord, ' +
@@ -143,13 +137,13 @@ const ProjectsData = [
         'By integrating the discord plugin with Jenkins we were able to send a message to discord when a build was complete. This gave the team a clear understanding of the state of the build along with direct access. This also acted as a log for any issues that broke the build. ' +
         'By creating discord threads for any error that cause the build to fail we were able to keep track of what error caused the failure without leaving discord. \n\n' +
         'Having the Jenkins messages inside of discord is really important to decrease communication bottlenecks. Also having a public record keeps problems from being hidden away on someones personal laptop.',
-      '<div className="project__image-container"><img className="project__image" src="/projects/dead-pedal/jenkins-build-success.PNG" alt="Markdown Monster icon" width="100%"  /></div>',
+      '<img className="project__image" src="/projects/dead-pedal/jenkins-build-success.PNG" alt="Markdown Monster icon" width="100%"  />',
         '### RSS Change log',
         'In conjunction with the build notifications we leveraged RSS to keep track of our commits. Showing a clear build history allows us to quickly identify what work gets into the build and what we may still be waiting on.',
-      '<div className="project__image-container"><img className="project__image" src="/projects/dead-pedal/change-log.PNG" alt="Markdown Monster icon" width="100%"  /></div>',
+      '<img className="project__image" src="/projects/dead-pedal/change-log.PNG" alt="Markdown Monster icon" width="100%"  />',
         '### Car Physics',
         'For any driving game car physics is a vital component. In the Fall we discussed two paths for car physics.' +
-        ' The first was to use Unreal Engine\'s chaos driving physics. The second was to take on the risk of building our own physics model.', 
+        ' The first was to use Unreal Engine\'s chaos driving physics. The second was to take on the risk of building our own physics model.',
         ' We decided to build our own physics engine because we found while highly realistic Unreal\'s implementation had a immense number of parameters and would be a nightmare to tune. ' +
         'So instead we set out to create our own model that would maintain a level of realistic feel but would simple enough to tune to our liking. ' +
         'This allowed us to cater the physics to the design rather than the other way around. ',
@@ -173,17 +167,21 @@ const ProjectsData = [
     thumbnail: 'https://michael-bowen.com/images/turbo-hybrid-cube.gif',
     name: 'Turbo-Hybrid Game Engine',
     description: [
-      'The Turbo Hybrid Game Engine was created to understand what it takes to build a game engine from scratch and appreciate some core systems. Structure of Arrays component systems, Data driven game objects and 3D rendering were key design goals for this engine.',
+      'The Turbo Hybrid Game Engine is a 3D game framework that includes a gameobject component system built using a structure of arrays, JSON data serilization, and bgfx 3D rendering.',
     ],
     stack: ['C++', 'SDL2', 'bgfx' ],
-    details: ['' +
+    details: ['### Overview',
+    'This project was completed over 15 weeks as apart of a class on game engine development during the Fall of 2022. Creating an SDL window, Gameobjects, components, and basic player movement were core to the course desgin. JSON parsing and 3D rendering were optional components. As a part of the final project I teamed up with Steven Annunziato to help with Implementing a 3D renderer.',
+    'We made the desgin decision to ensure our solution allowed for custom shaders on a per object basis. We settled on bgfx for its wide use in games inculding Minecraft. It also abstracted the backend service decreasing the time and boilerplate for setting up OpenGL. With solid documentation we dove head first implementing a MVP matrix for each gameobject that had a cube component renderer.',
+    '## Technical Details',
+    'Below is a blog post going into all the details about our rendering implementation.',
     '### Personal Contributions:\n' +
     '\n' +
     '* Implemented emscripten and windows build systems using SDL and C++.\n' +
     '* Utilized JSON file format for reading game object and component data.\n' +
     '* Worked on integrating bgfx 3D rendering library into the engine and built out a cube renderer component\n',
     '### Overview\n' +
-    'In a world of game engines and package managers, it is easy to become detached from the core processes that make up modern software. For game developers, this comes in the form of software like Unity, Unreal Engine, Gamemaker, and Godot. Especially in 3D software, the process of rendering is taken for granted. Even the idea of creating an application window can be a concept that is hard to grasp. This was true for me before starting to build this engine. I have been using PCs since Windows XP yet I had no intuition about how to create a window.', 
+    'In a world of game engines and package managers, it is easy to become detached from the core processes that make up modern software. For game developers, this comes in the form of software like Unity, Unreal Engine, Gamemaker, and Godot. Especially in 3D software, the process of rendering is taken for granted. Even the idea of creating an application window can be a concept that is hard to grasp. This was true for me before starting to build this engine. I have been using PCs since Windows XP yet I had no intuition about how to create a window.',
       'The Tubro Hybrid Game engine was created to teach myself how to build an application from scratch.\n' +
       'The goals for this engine:\n' +
       '\n' +

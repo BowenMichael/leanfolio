@@ -1,4 +1,4 @@
-﻿import {ThemeContext} from "../../contexts/theme";
+import {ThemeContext} from "../../contexts/theme";
 import {useContext, useEffect, useState} from "react";
 import Navbar from "../../components/Navbar";
 import Projects from "../../components/Projects";
