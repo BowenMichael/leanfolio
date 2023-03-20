@@ -115,7 +115,7 @@ const ProjectsData = [
     thumbnail: 'https://michael-bowen.com/DeadPedal-2.png',
     name: 'Dead Pedal',
     description: [
-        'As Lead Programmer I maintained a Unreal CI/CD pipeline, creating and itertating our car physics, as well as establishing the programming team\'s feature timeline.'
+        'As Lead Programmer I maintained an Unreal CI/CD pipeline, creating and itertating our car physics, as well as establishing the programming team\'s feature timeline.'
         ],
     stack: ['Lead Programmer', 'UE5', 'Git', 'Jenkins', 'Google Cloud'],
     details: ['### The Game',
@@ -160,7 +160,7 @@ const ProjectsData = [
         'reach out. I would love to go into more detail.',
         
     ],
-    livePreview: 'https://larnio.itch.io/dead-pedal',
+    livePreview: 'https://store.steampowered.com/app/2250160/Dead_Pedal/',
   },
   {
     href : 'turbo-hybrid',
