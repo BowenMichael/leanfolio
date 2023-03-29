@@ -1,4 +1,6 @@
-;import {CopyBlock, dracula} from "react-code-blocks";
+import {CopyBlock, dracula} from "react-code-blocks";
+
+// region rendered functions
 
 const mainRenderFunction = '' +
       '    /*\n' +
@@ -88,6 +90,7 @@ const cubeRenderFunction = 'void TurboHybrid::CubeRenderer::render(const float& 
       '\tbgfx::submit(0, m_program);\n' +
       '}';
 
+// endregion
 
 const about = {
   // all the properties are optional - can be left empty or deleted
@@ -95,9 +98,9 @@ const about = {
   name: 'Michael Bowen',
   role: 'Game Programmer',
   description: [
-    'Graduating in May 2023 with a focus in game CI/CD, physics, and VR programming.',
+    'Graduating in May 2023 with a focus in game devops, physics, and backend.',
   ],
-  img : 'https://michael-bowen.com/michaelSmaller.png',
+  img : '/images/profile/michaelSmaller.png',
   resume: '/Resumes/Michael_Bowen_Resume_03-13-23.pdf',
   social: {
     linkedin: 'https://www.linkedin.com/in/bowen-michael/',
@@ -112,19 +115,19 @@ const ProjectsData = [
   // each element in the description array is a paragraph
   {
     href : 'dead-pedal',
-    thumbnail: 'https://michael-bowen.com/DeadPedal-2.png',
+    thumbnail: '/projects/dead-pedal/DeadPedal-2.png',
     name: 'Dead Pedal',
     description: [
-        'As Lead Programmer I maintained an Unreal CI/CD pipeline, creating and itertating our car physics, as well as establishing the programming team\'s feature timeline.'
-        ],
+        'As Lead Programmer, I maintained an Unreal CI/CD pipeline, creating and iterating our car physics, as well as establishing the programming team\'s feature timeline.'
+      ],
     stack: ['Lead Programmer', 'UE5', 'Git', 'Jenkins', 'Google Cloud'],
     details: ['### The Game',
       'In Dead Pedal you play as John D. Pedal in a post apocalyptic world fending of ruthless marauders and mutant beasts. ' +
       'Upgrade you car with new weapons and customizations by taking out various factions. When your ready take on THE WORM and bring peace back to the mojave.',
       'Planned Steam release May 2023.',
-        '<iframe width="100%" height="315" src="https://www.youtube.com/embed/hmdd7PEL4Rg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+        '<iframe width="100%" height="315" src="https://www.youtube.com/embed/hmdd7PEL4Rg" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
       '### Timeline',
-      'Starting development in September 2022 I worked on a cross-disiplanry team of developers to create Dead Pedal for the Champlain College Game studio.',
+      'Starting development in September 2022 I worked on a cross-disciplinary team of developers to create Dead Pedal for the Champlain College Game studio.',
       'We made the decision to learn Unreal Engine 5 to utilize Chaos Physics, World Partition and leverage Unreal\'s rendering.',
       '## Technical Details',
       '### Google Cloud',
@@ -137,10 +140,10 @@ const ProjectsData = [
         'By integrating the discord plugin with Jenkins we were able to send a message to discord when a build was complete. This gave the team a clear understanding of the state of the build along with direct access. This also acted as a log for any issues that broke the build. ' +
         'By creating discord threads for any error that cause the build to fail we were able to keep track of what error caused the failure without leaving discord. \n\n' +
         'Having the Jenkins messages inside of discord is really important to decrease communication bottlenecks. Also having a public record keeps problems from being hidden away on someones personal laptop.',
-      '<img className="project__image" src="/projects/dead-pedal/jenkins-build-success.PNG" alt="Markdown Monster icon" width="100%"  />',
+      '<img class="project__image" src="/projects/dead-pedal/jenkins-build-success.PNG" alt="Markdown Monster icon" width="100%"  />',
         '### RSS Change log',
         'In conjunction with the build notifications we leveraged RSS to keep track of our commits. Showing a clear build history allows us to quickly identify what work gets into the build and what we may still be waiting on.',
-      '<img className="project__image" src="/projects/dead-pedal/change-log.PNG" alt="Markdown Monster icon" width="100%"  />',
+      '<img class="project__image" src="/projects/dead-pedal/change-log.PNG" alt="Markdown Monster icon" width="100%"  />',
         '### Car Physics',
         'For any driving game car physics is a vital component. In the Fall we discussed two paths for car physics.' +
         ' The first was to use Unreal Engine\'s chaos driving physics. The second was to take on the risk of building our own physics model.',
@@ -164,15 +167,15 @@ const ProjectsData = [
   },
   {
     href : 'turbo-hybrid',
-    thumbnail: 'https://michael-bowen.com/images/turbo-hybrid-cube.gif',
+    thumbnail: '/projects/turbo-hybrid/turbo-hybrid-cube.gif',
     name: 'Turbo-Hybrid Game Engine',
     description: [
-      'The Turbo Hybrid Game Engine is a 3D game framework that includes a gameobject component system built using a structure of arrays, JSON data serilization, and bgfx 3D rendering.',
+      'The Turbo Hybrid Game Engine is a 3D game framework that includes a game object component system built using a structure of arrays, JSON data serialization, and bgfx 3D rendering.',
     ],
     stack: ['C++', 'SDL2', 'bgfx' ],
     details: ['### Overview',
-    'This project was completed over 15 weeks as apart of a class on game engine development during the Fall of 2022. Creating an SDL window, Gameobjects, components, and basic player movement were core to the course desgin. JSON parsing and 3D rendering were optional components. As a part of the final project I teamed up with Steven Annunziato to help with Implementing a 3D renderer.',
-    'We made the desgin decision to ensure our solution allowed for custom shaders on a per object basis. We settled on bgfx for its wide use in games inculding Minecraft. It also abstracted the backend service decreasing the time and boilerplate for setting up OpenGL. With solid documentation we dove head first implementing a MVP matrix for each gameobject that had a cube component renderer.',
+    'This project was completed over 15 weeks as apart of a class on game engine development during the Fall of 2022. Creating an SDL window, game objects, components, and basic player movement were core to the course design. JSON parsing and 3D rendering were optional components. As a part of the final project I teamed up with Steven Annunziato to help with Implementing a 3D renderer.',
+    'We made the design decision to ensure our solution allowed for custom shaders on a per object basis. We settled on bgfx for its wide use in games including Minecraft. It also abstracted the backend service decreasing the time and boilerplate for setting up OpenGL. With solid documentation we dove head first implementing a MVP matrix for each game object that had a cube component renderer.',
     '## Technical Details',
     'Below is a blog post going into all the details about our rendering implementation.',
     '### Personal Contributions:\n' +
@@ -182,7 +185,7 @@ const ProjectsData = [
     '* Worked on integrating bgfx 3D rendering library into the engine and built out a cube renderer component\n',
     '### Overview\n' +
     'In a world of game engines and package managers, it is easy to become detached from the core processes that make up modern software. For game developers, this comes in the form of software like Unity, Unreal Engine, Gamemaker, and Godot. Especially in 3D software, the process of rendering is taken for granted. Even the idea of creating an application window can be a concept that is hard to grasp. This was true for me before starting to build this engine. I have been using PCs since Windows XP yet I had no intuition about how to create a window.',
-      'The Tubro Hybrid Game engine was created to teach myself how to build an application from scratch.\n' +
+      'The Turbo Hybrid Game engine was created to teach myself how to build an application from scratch.\n' +
       'The goals for this engine:\n' +
       '\n' +
       '* Build a game engine application from scratch\n' +
@@ -193,7 +196,7 @@ const ProjectsData = [
       'The main chunk of this project was the 3D Graphics rendering. The project was completed as a part of the Champlain College Game Programming curriculum. But when it came to how we implemented Serialization and what we did for our final project approaches differed. I worked with [StevenAnnunziato](https://github.com/StevenAnnunziato) to develop our 3D graphics solution. We decided to implement bgfx as an intermediate graphics library. This allowed us to focus on the concepts of 3D rendering rather than getting stuck on lower ideas. This also allowed me to focus on integrating it into the engine while Steve was able to integrate the shaders.\n' +
       '\n',
       '#### Creating a render function\n',
-      '![BOX](https://michael-bowen.com/images/Cube-rendering.png)',
+      (<img width={'100%'} src='/projects/turbo-hybrid/Cube-rendering.png'/>),
       'The first thing I want to look at is the render function. Inside my main loop, I am creating two matrices that I am going to pass into bgfx to define my 3D space. These matrices are the view matrix and projection matrix. The View matrix defines my camera while the projection matrix determines the type of camera. the two most common types are perspective and orthographic. Here I am using perspective. This means I am defining a perspective camera.',
       '#### [glm::Namespace](https://github.com/g-truc/glm)',
       'GLM is a math library that we needed to use on windows because the built-in math library inside of bx was not suitable for use on windows. GLM is an open source header-only math library. GLM is based on the OpenGL specification which makes it perfect for our use.',
@@ -201,11 +204,11 @@ const ProjectsData = [
       '### Rendering Cube render components',
       'The Turbo hybrid engine uses a component bases structure of arrays. This means that all the components are stored on the stack right next to each other. By looping through an array of CubeRenderer components I compute specific actions. Each CubeRenderer component references the same vertex and index buffers that define the cube. They also are using the same shader program.',
       (<CopyBlock text={cubeRenderFunction} language={"cpp"} wrapLines={true} theme={dracula}/> ),
-      '![Cubes](https://michael-bowen.com/images/turbo-hybrid-alternating-rotate.gif)',
+      (<img width={'100%'} src='/projects/turbo-hybrid/turbo-hybrid-alternating-rotate.gif'/>),
       'This is what renders each cube component separately. Adding things like mesh information and setting different shaders would just be a matter of changing out the buffers and the program. Adding additional components for things like collision would be the first step to making a more versatile game engine.\n' +
       '\n',
       '### Conclusion\n',
-      'I learned a lot from developing this engine. It was really satifying to see all the steps of the process from window creation to rendering full 3D images. Bgfx was a great option for developing my own 3D components while maintining control of the graphics pipline while interfacing with your graphics backend of choice. It also supports various backends and platforms which makes it a great option for games. This project is only scratching the surface but I am really glad to of had the experience.',
+      'I learned a lot from developing this engine. It was really satisfying to see all the steps of the process from window creation to rendering full 3D images. Bgfx was a great option for developing my own 3D components while maintaining control of the graphics pipeline while interfacing with your graphics backend of choice. It also supports various backends and platforms which makes it a great option for games. This project is only scratching the surface but I am really glad to of had the experience.',
       'If your interested in the codebase it is on my GitHub and if you have any questions feel to shoot me a message on linkedin',
 
       '' +
@@ -215,7 +218,7 @@ const ProjectsData = [
   },
   {
     href : 'hand-tracking-vr',
-    thumbnail: '/images/hand-tracking/thumbnail.png',
+    thumbnail: '/projects/hand-tracking/thumbnail.png',
     name: 'Oculus Hand Tracking Demo',
     description: [
       'Oculus Hand tracking demo. This game was created on a team of 4. I was responsible for delivering hand tracking integration into the game. Took spell systems and adapted them for Oculus VR hand controls. This included Input poses, adapted throwing to a shoot, and alternate locomotion.',
@@ -229,7 +232,7 @@ const ProjectsData = [
 
   {
     href : 'olfactory-VR',
-    thumbnail: 'https://michael-bowen.com/well-being-thumbnail.png',
+    thumbnail: '/projects/well-being/well-being-thumbnail.png',
     name: 'Olfactory VR Meditation',
     description: [
       'Worked with Ion Technologies to integrate the Ion scent device into an immersive VR meditation experience. Developed for a study on how immersive technologies can be used to enhance well being',
@@ -242,7 +245,7 @@ const ProjectsData = [
   },
   {
     href : 'boat-combat',
-    thumbnail: '/images/boat-combat/thumbnail.png',
+    thumbnail: '/projects/boat-combat/thumbnail.png',
     name: 'Boat Combat',
     description: [
       'A mobile networked boat combat game about taking over points in the arena.\n ' +
@@ -256,14 +259,14 @@ const ProjectsData = [
     livePreview: 'https://drive.google.com/file/d/16AJ3fHggciywTfD9s9z9kTts-QXjJOT4/view?usp=sharing',
   },
   {
-    href : 'spartakids',
-    thumbnail: 'https://michael-bowen.com/spartakids-thumbnail.png',
+    href : 'Spartakids',
+    thumbnail: '/projects/spartakids/spartakids-thumbnail.png',
     name: 'Spartakids',
     description: [
       'Spartakids was developer as a part of the 2022 Ubisoft Game Lab Competition. The theme for the year was \'Student XP\'. Our interpretation of the theme lead us to a co-op boss fighter about the magic of play.',
     ],
     stack: ['Unity', 'Networking', 'UI', 'Networked Events', 'Gameplay'],
-    details: ['<div className="project__image-container"><img className="project__image about__image" src="https://michael-bowen.com/spartakids-logo-2.png" alt="Markdown Monster icon" width="100%"  /></div>',
+    details: ['<div class="project__image-container"><img class="project__image about__image" src="/projects/spartakids/spartakids-logo-2.png" alt="Markdown Monster icon" width="100%"  /></div>',
     'Spartakids is a co-op third-person boss fighting game developed for the 2022 Ubisoft Game Lab Competition. The game takes on the student experience as seen through the lens of play and imagination. You and your friend take on your imaginary monster during recess. Fight with your marker sword or compass bow to take down Spike. Make sure when the floor turns to lava to take to higher ground on top of the jungle gym. You and your friend trade weapons on top of the dome so make sure that you trading your perks so they are most effective.\n' +
     '\n',
     '### [Gameplay Video](https://www.youtube.com/watch?v=xEEImDZ5lIs)\n',
@@ -280,9 +283,9 @@ const ProjectsData = [
     '* player weapons systems and general CCC\n' +
     '* Perks/UI systems\n' +
     '* Networked systems and animations\n' +
-    '* cinematics/particles to convey context\n',
-    '### Personal Contriubtion\n',
-    'I started the project as a gameplay programmer focusing on CCC. It was quickly identified that Networking was going to be vital for the co-op experience so I shifted my focus during the project to network gameplay elements. Aswell as timelines, perks, and UI.\n' +
+    '* cinematic/particles to convey context\n',
+    '### Personal Contribution\n',
+    'I started the project as a gameplay programmer focusing on CCC. It was quickly identified that Networking was going to be vital for the co-op experience so I shifted my focus during the project to network gameplay elements. As well as timelines, perks, and UI.\n' +
     '\n' +
     'What I worked on:\n' +
     '\n' +
