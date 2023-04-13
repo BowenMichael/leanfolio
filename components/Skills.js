@@ -11,12 +11,14 @@ const Skills = () => {
       <h2 className='section__title'>Skills</h2>
       <ul className='skills__list'>
         {skills.map((skill) => (
+          <div key={uniqid()}>
             <a href={skill.href}
             >
               <li key={uniqid()} className='skills__list-item btn btn--plain'>
                   {skill.name}
               </li>
             </a>
+          </div>
         ))}
       </ul>
     </section>
