@@ -7,7 +7,7 @@ import Image from "next/image";
 
 
 const About = () => {
-  const { name, role, company, description, resume, social, greetingEmoji, img } =
+  const { name, role, company, description, resume, social, greetingEmoji, img, reel } =
     about
   const firstName = name ? name.split(' ')[0] : null
 
@@ -26,7 +26,7 @@ const About = () => {
         </h1>
             
       )}
-      
+        
       {role && (
         <h1 className='about__role animate__animated animate__fadeInUp animate__delay-2s'>
           I&apos;m a {role}
@@ -94,6 +94,11 @@ const About = () => {
       </div>
 
       <div className='about__pseudo-padding' />
+
+        <iframe style={{ marginTop : '3rem'}} width="560" height="315" src="https://www.youtube.com/embed/_evFuQ-EVoc"
+                title="YouTube video player" frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen/>
     </div>
   )
 }
