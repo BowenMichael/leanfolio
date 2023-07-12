@@ -130,37 +130,51 @@ const ProjectsData = [
       'Starting development in September 2022 I worked on a cross-disciplinary team of developers to create Dead Pedal for the Champlain College Game studio.',
       'We made the decision to learn Unreal Engine 5 to utilize Chaos Physics, World Partition and leverage Unreal\'s rendering.',
       '## Technical Details',
+      '<div id="Google"/>',
       '### Google Cloud',
-      '\nUtilizing Jenkins and Google Cloud I created an automated build server. This saved hours of programming ' +
-      'time and allowed us to show off the build in less than 60 seconds. By integrating an RSS change log with discord, ' +
-      'Jenkins build webhooks, and google bucket integration allowed download links to be displayed directly in discord. ' +
-      'This also make it very clear which commits were in which build because the change-log is displayed right next to the build.' +
-      '\n\n ',
-        '### Automated Build notification',
-        'By integrating the discord plugin with Jenkins we were able to send a message to discord when a build was complete. This gave the team a clear understanding of the state of the build along with direct access. This also acted as a log for any issues that broke the build. ' +
-        'By creating discord threads for any error that cause the build to fail we were able to keep track of what error caused the failure without leaving discord. \n\n' +
-        'Having the Jenkins messages inside of discord is really important to decrease communication bottlenecks. Also having a public record keeps problems from being hidden away on someones personal laptop.',
-      '<img class="project__image" src="/projects/dead-pedal/jenkins-build-success.PNG" alt="Markdown Monster icon" width="100%"  />',
-        '### RSS Change log',
-        'In conjunction with the build notifications we leveraged RSS to keep track of our commits. Showing a clear build history allows us to quickly identify what work gets into the build and what we may still be waiting on.',
-      '<img class="project__image" src="/projects/dead-pedal/change-log.PNG" alt="Markdown Monster icon" width="100%"  />',
-        '### Car Physics',
-        'For any driving game car physics is a vital component. In the Fall we discussed two paths for car physics.' +
-        ' The first was to use Unreal Engine\'s chaos driving physics. The second was to take on the risk of building our own physics model.',
-        ' We decided to build our own physics engine because we found while highly realistic Unreal\'s implementation had a immense number of parameters and would be a nightmare to tune. ' +
-        'So instead we set out to create our own model that would maintain a level of realistic feel but would simple enough to tune to our liking. ' +
-        'This allowed us to cater the physics to the design rather than the other way around. ',
-        'An example of this is we were testing two different models one used a forward force vector ' +
-        'to move forward and a rotation along the vertical axis. This resulted in a very whimsical ' +
-        'drifting driving style. The other behaved like a car on rails and was really good for making ' +
-        'quick turns at high speed. Because we had a deep understanding of the driving we were able to ' +
-        'toggle between these two modes giving the player the ability to decide which driving mode suits them best. '+
-        'I believe that without taking this approach we would have been stuck with driving that while felt realistic it ' +
-        'would not be able to synergize with the rest of the game.',
-        '### To be continued...',
-        ' I would like to go into more detail and do a full ' +
-        'retrospective after the game comes out on this system in particular. If you would be interested feel free to ' +
-        'reach out. I would love to go into more detail.',
+      'At the beginning of the project we identified our ability to iterate as a key area of risk. ' +
+      'To create a driving system that would be intuitive and function as players would expect we need to ' +
+      'ensure we could test efficiently. We created the build server to drastically reduce the time and effort in creating a build.' +
+      'This not only saved time when putting builds together but it saved time when testing because the builds were easily ' +
+      'accessible. Every week we knew the state of the build which built confidence in how people interacted with the build.',
+      '#### Overview',
+      'The build server has 5 core elements that allow for this pipeline.',
+      '\n- The repo(we used git)' +
+      '\n- The Jenkins server' +
+      '\n- Google cloud build agents' +
+      '\n- Google cloud buckets' +
+      '\n- Team notification',
+      '<img class="project__image" src="/projects/dead-pedal/build-pipeline-git.PNG" alt="Markdown Monster icon" width="100%"  />',
+      '#### Repo',
+      'The build needs to be stored somewhere in our case it was stored in Git. However it could be upgraded to support SVN or Perforce'+
+      'The build also gets cached onto the build server instance so a large repo size is not a problem.',
+      '#### Jenkins Server',
+      'The Jenkins server exists as the brains of this operation. It manages all the commands, artifacts and manages the ' +
+      'build instances. This supports user authentication so you can give your team access to this to avoid any build ' +
+      'bottlenecks. anyone with access to the jenkins server can generate a build at any time',
+      '<img class="project__image" src="/projects/dead-pedal/Jenkins.PNG" alt="Markdown Monster icon" width="100%"  />',
+      '#### Cloud build agents',
+      'The cloud build agents are machines with larger allocations of compute to support building the game. ' +
+      'This is where your game will be build before the build is saved. These machines are custom images ' +
+      'so they can support any necessary third party libraries required for compute.', 
+      '#### Google Cloud Buckets',
+      'The builds then get saved to google cloud buckets. This gives anyone with access ' +
+      'to the link the ability to download the game. this will reduce time to retreating your game and testing it.', 
+      '#### Finally Team integration',
+      'This is all good but if it is not publicly available to your team it will only exist in the background. ' +
+      'Notifying your team via discord or slack is important to automatically communicate the build status to your team',
+      '<img class="project__image" src="/projects/dead-pedal/Jenkins-notification.PNG" alt="Markdown Monster icon" width="100%"  />',
+        '### Conclusion',
+        'This approach not only will give you more confidence in your build integrity ' +
+        'but it will allow your team to test the CURRENT version of the build much faster.' +
+        'This is also the starting point for more complex things like automated testing and tracking of users interaction with your game',
+        '## Access',
+        'If you are interesting in accessing this reach out to me on linkedin, via email or phone number and we can ' +
+        'set up a meeting to go over how you might integrate this into your pipeline.',
+        '<a href="https://www.linkedin.com/in/bowen-michael/">Linkedin</a>',
+        '<a href="mailto::michael@thebowenfamily.com">michael@thebowenfamily.com</a>',
+        '<a href="call::5856358255">5856358255</a>'
+        
         
     ],
     livePreview: 'https://store.steampowered.com/app/2250160/Dead_Pedal/',
