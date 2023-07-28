@@ -180,7 +180,7 @@ const about = {
     'Graduating in May 2023 with a focus in game devops, physics, and backend.',
   ],
   img : '/images/profile/michaelSmaller.png',
-  resume: '/Resumes/Michael-Bowen_Resume_05-06-23.pdf',
+  resume: '/Resumes/Michael-Bowen_Resume_07-28-2023.pdf',
   social: {
     linkedin: 'https://www.linkedin.com/in/bowen-michael/',
     github: 'https://github.com/BowenMichael',
