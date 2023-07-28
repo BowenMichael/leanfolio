@@ -90,6 +90,85 @@ const cubeRenderFunction = 'void TurboHybrid::CubeRenderer::render(const float& 
       '\tbgfx::submit(0, m_program);\n' +
       '}';
 
+const BP_Mission = '\n  ' +
+    '\t/*\n' +
+    '\t\tBP_Mission.h\n' +
+    '\t*/\n' +
+    '\tUFUNCTION(BlueprintCallable)\n' +
+    '\tvirtual void MissionComplete();\n' +
+    '\t\n' +
+    '\tUFUNCTION(BlueprintCallable)\n' +
+    '\tvirtual void MissionStart();\n' +
+    '\t\n' +
+    '\t/*\n' +
+    '\t\t BP_Mission.cpp\n' +
+    '\t*/\n' +
+    '\tvoid ABP_Mission::MissionComplete()\n' +
+    '\t{\n' +
+    '\t\t// Flag Mission as complete\n' +
+    '\t\tmissionComplete = true;             \n\n'+
+    '\t\t// Callback to Mission manager\n' +
+    '\t\tmdOnMissionComplete.Broadcast();    \n\n'+
+    '\t\t// Unique Mission Callback\n' +
+    '\t\tOnMissionComplete();                \n\n'+
+    '\t}\n' +
+    '\t\n' +
+    '\tvoid ABP_Mission::MissionStart()\n' +
+    '\t{\n' +
+    '\t\t// Flag Mission as not complete\n' +
+    '\t\tmissionComplete = false;            \n\n'+
+    '\t\t// Callback to Mission manager\n' + 
+    '\t\tmdOnMissionStart.Broadcast();       \n\n'+
+    '\t\t// Unique Mission Callback\n' +     
+    '\t\tOnMissionStart();                   \n\n'+
+    '\t}';
+
+const BP_MissionManager = '\n  ' +
+    '\t/*\n' +
+    '\t\tBP_MissionManager.cpp\n' +
+    '\t*/\n' +
+    '\tvoid AMisisonManager::BindMissionToActive(\n' +
+    '\t\tABP_Mission* newMission)\n' +
+    '\t{\n' +
+    '\t\t// Make sure newMission is active\n' +
+    '\t\tif (newMission == nullptr) {\n' +
+    '\t\t\tUE_LOG(LogTemp,\n' +
+    '\t\t\t\tWarning,\n' +
+    '\t\t\t\tTEXT("Failed to bind Mission: Mission active"));\n' +
+    '\t\t\treturn;\n' +
+    '\t\t}\n' +
+    '\t\n' +
+    '\t\t// Set Active mission\n' +
+    '\t\tactiveMission = newMission;\n' +
+    '\t\t\n' +
+    '\t\t// Blueprint implementable callback\n' +
+    '\t\tactiveMission->OnMissionBind((AMisisonManager*)this);\n' +
+    '\t\n' +
+    '\t\t// Bind Active Mission Delegates\n' +
+    '\t\tactiveMission->mdOnMissionComplete.AddDynamic(\n' +
+    '\t\t\tthis, &AMisisonManager::OnMissionComplete);\n' +
+    '\t\tactiveMission->mdOnMissionStart.AddDynamic(\n' +
+    '\t\t\tthis, &AMisisonManager::OnMissionStart);\n' +
+    '\t\n' +
+    '\t}\n' +
+    '\t\n' +
+    '\tvoid AMisisonManager::UnbindActiveMission()\n' +
+    '\t{\n' +
+    '\t\tif (activeMission == nullptr) return; // No Mission to unbind\n' +
+    '\t\n' +
+    '\t\t// Unbind Mission Delegates\n' +
+    '\t\tactiveMission->mdOnMissionComplete.RemoveDynamic(\n' +
+    '\t\t\tthis, &AMisisonManager::OnMissionComplete);\n' +
+    '\t\tactiveMission->mdOnMissionStart.RemoveDynamic(\n' +
+    '\t\t\tthis, &AMisisonManager::OnMissionStart);\n' +
+    '\t\n' +
+    '\t\t// Blueprint implementable callback\n' +
+    '\t\tactiveMission->OnMissionUnbind((AMisisonManager*)this);\n' +
+    '\t\n' +
+    '\t\t// Set Active Mission to null\n' +
+    '\t\tactiveMission = nullptr;\n' +
+    '\t}'
+
 // endregion
 
 const about = {
@@ -121,7 +200,8 @@ const ProjectsData = [
         'As Lead Programmer, I maintained an Unreal CI/CD pipeline, creating and iterating our car physics, as well as establishing the programming team\'s feature timeline.'
       ],
     stack: ['Lead Programmer', 'UE5', 'Git', 'Jenkins', 'Google Cloud'],
-    details: ['### The Game',
+    details: ['<div><a href="#Google">Google Cloud</a><br/> <a href="#Missions">Mission System</a><br/> <a href="#Learn">Learn More</a><div/>',
+        '### The Game',
       'In Dead Pedal you play as John D. Pedal in a post apocalyptic world fending of ruthless marauders and mutant beasts. ' +
       'Upgrade you car with new weapons and customizations by taking out various factions. When your ready take on THE WORM and bring peace back to the mojave.',
       'Planned Steam release May 2023.',
@@ -129,8 +209,8 @@ const ProjectsData = [
       '### Timeline',
       'Starting development in September 2022 I worked on a cross-disciplinary team of developers to create Dead Pedal for the Champlain College Game studio.',
       'We made the decision to learn Unreal Engine 5 to utilize Chaos Physics, World Partition and leverage Unreal\'s rendering.',
-      '## Technical Details',
       '<div id="Google"/>',
+      '## Technical Details',
       '### Google Cloud',
       'At the beginning of the project we identified our ability to iterate as a key area of risk. ' +
       'To create a driving system that would be intuitive and function as players would expect we need to ' +
@@ -168,6 +248,33 @@ const ProjectsData = [
         'This approach not only will give you more confidence in your build integrity ' +
         'but it will allow your team to test the CURRENT version of the build much faster.' +
         'This is also the starting point for more complex things like automated testing and tracking of users interaction with your game',
+      '<div id="Missions"/><br/><br/><br/>',
+        '### Mission System',
+        'The Goal with the mission system was to create something that could be scaled out by the design team. ' +
+        'Given the open world nature of our game we wanted a mission system that would not confine the player. ' +
+        'I settled on created a C++ back end that would create a blueprint front end that could be extensible with ' +
+        'unique behaviors.',
+        '#### Tutorials',
+        'In an effort to document these systems I took a visual approach as opposed to a word document. I created a ' +
+        'series of videos that show how to set up mission blueprints and mission triggers through out the level. This ' +
+        'allowed me to show off some of the smaller details about the system without creating a verbose document.',
+        (<div className={'projects__grid'}>
+          <a href="https://drive.google.com/file/d/1kIpO7VjVfOaTn34qGA2ZcYQWsIKimLJz/view?usp=sharing" > Mission System Part 1: Mission Manager Blueprint Overview</a>
+          <a href="https://drive.google.com/file/d/1TV6QAZoXz2dYhz-RzTvbBmMEODNU4yZz/view?usp=sharing" > Mission System Part 2: Mission trigger system overview</a>
+          <a href="https://drive.google.com/file/d/1gxpQQFnSTaQlMyN9ASqstNcU3IwE7oYW/view?usp=share_link" > Mission System Part 3: Setting up Mission targets</a>
+          <a href="https://drive.google.com/file/d/1e_cskuIvzglVsWn1T-Ttm-ggGp4tnQUI/view?usp=share_link" > Mission System Part 4: Setting up AI patrols</a>
+        </div>),
+        '#### BP Mission',
+        'The Mission is the core of what all unique missions were built off. This allowed contained behavior that was ' +
+        'specific to a mission type. If the goal was to drive to a location or take out key base targets that could all ' +
+        'be defined in the mission.',
+      (<CopyBlock text={BP_Mission} language={"cpp"} wrapLines={true} theme={dracula}/> ),
+        '#### BP Mission Manager',
+        'The Mission Manager is responsible for keeping track of the active mission. This means keep the UI up to date ' +
+        'and keeping track of completed missions. This allowed for common mission actions to be take care of in one place.',
+      (<CopyBlock text={BP_MissionManager} language={"cpp"} wrapLines={true} theme={dracula}/> ),
+        
+      '<div id="Learn"/>',
         '## Access',
         'If you are interesting in accessing this reach out to me on linkedin, via email or phone number and we can ' +
         'set up a meeting to go over how you might integrate this into your pipeline.',

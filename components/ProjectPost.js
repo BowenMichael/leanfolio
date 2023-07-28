@@ -3,6 +3,33 @@ import LaunchIcon from '@material-ui/icons/Launch'
 import React from 'react'
 import {MapPortfolioDataArray, MapProjectStack} from "../scripts/util";
 
+const ExternalLink = ({project}) => (
+    <>
+        {project.sourceCode && (
+            <a
+                href={project.sourceCode}
+                target='_blank'
+                rel='noreferrer'
+                aria-label='source code'
+                className='link link--icon'
+            >
+                <GitHubIcon />
+            </a>
+        )}
+        {project.livePreview && (
+            <a
+                href={project.livePreview}
+                target='_blank'
+                rel='noreferrer'
+                aria-label='live preview'
+                className='link link--icon'
+            >
+                <LaunchIcon />
+            </a>
+        )}
+    </>
+) 
+
 const ProjectCard = ({ project }) => (
     <main>
       <div className='project project__Post'>
@@ -21,7 +48,9 @@ const ProjectCard = ({ project }) => (
           {project.stack && (
             <MapProjectStack stack={project.stack} />
           )}
-                
+            <ExternalLink project={project}/>
+
+
             {project.details && (<>
                 <h2>Details</h2>
                 {project.description && (
@@ -35,28 +64,7 @@ const ProjectCard = ({ project }) => (
                     </div>
                 </div>
             </>)}
-            {project.sourceCode && (
-                <a
-                    href={project.sourceCode}
-                    target='_blank'
-                    rel='noreferrer'
-                    aria-label='source code'
-                    className='link link--icon'
-                >
-                    <GitHubIcon />
-                </a>
-            )}
-            {project.livePreview && (
-                <a
-                    href={project.livePreview}
-                    target='_blank'
-                    rel='noreferrer'
-                    aria-label='live preview'
-                    className='link link--icon'
-                >
-                    <LaunchIcon />
-                </a>
-            )}
+            <ExternalLink project={project}/>
                 
             
             
