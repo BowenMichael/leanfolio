@@ -169,6 +169,28 @@ const BP_MissionManager = '\n  ' +
     '\t\tactiveMission = nullptr;\n' +
     '\t}'
 
+const JSONData= '' +
+    '{\n' +
+    '\t"GameObjects" :\n' +
+    '\t\t[\n' +
+    '\t\t\t{\n' +
+    '\t\t\t\t"TRAN" : [0, 0,5 ],\n' +
+    '\t\t\t\t"CUBE" : {\n' +
+    '\t\t\t\t\t"Color": [1, 1, 1, 1]\n' +
+    '\t\t\t\t},\n' +
+    '\t\t\t\t"PLRC" : {\n' +
+    '\t\t\t\t\t"Speed" : [0.1]\n' +
+    '\t\t\t\t}\n' +
+    '\t\t\t},\n' +
+    '\t\t\t{\n' +
+    '\t\t\t\t"TRAN" : [4, 0, 0],\n' +
+    '\t\t\t\t"CUBE" : {\n' +
+    '\t\t\t\t\t"Color": [1, 0, 1, 1]\n' +
+    '\t\t\t\t}\n' +
+    '\t\t\t}\n' +
+    '\t\t]\n' +
+    '}'
+
 // endregion
 
 const about = {
@@ -313,6 +335,11 @@ const ProjectsData = [
       '* Compile to multiple platforms\n' +
       '* Data loaded from JSON\n' +
       '* Render 3D graphics',
+      '### GameObject Data',
+      'All the game objects are stored inside json with a component structure. The list of game objects is an array and ' +
+      'each component is marked is a 4 letter string. Each 4 letter string can be converted into a enum representing a ' +
+      'component type. Here is a simple file where the components are TRAN(Transform), CUBE(Cube renderer), and PLRC(Player Controller).',
+      (<CopyBlock text={JSONData} language={"JSON"} wrapLines={true} theme={dracula}/> ),
       '### 3D Graphics\n',
       'The main chunk of this project was the 3D Graphics rendering. The project was completed as a part of the Champlain College Game Programming curriculum. But when it came to how we implemented Serialization and what we did for our final project approaches differed. I worked with [StevenAnnunziato](https://github.com/StevenAnnunziato) to develop our 3D graphics solution. We decided to implement bgfx as an intermediate graphics library. This allowed us to focus on the concepts of 3D rendering rather than getting stuck on lower ideas. This also allowed me to focus on integrating it into the engine while Steve was able to integrate the shaders.\n' +
       '\n',
