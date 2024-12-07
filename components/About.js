@@ -16,7 +16,7 @@ const About = () => {
       <div className='about__pseudo-padding about__pseudo-padding-top' />
 
       {img && (<>
-        <img className='animate__animated animate__fadeInUp animate__delay-1s about__image' src={img} />
+        <img className='animate__animated animate__fadeInUp animate__delay-1s about__image' src={img}  width={320} height={320} />
       </>)}
 
       {firstName && (
@@ -93,12 +93,6 @@ const About = () => {
         </div>
       </div>
 
-      <div className='about__pseudo-padding' />
-
-        <iframe style={{ marginTop : '3rem'}} width="560" height="315" src="https://www.youtube.com/embed/_evFuQ-EVoc"
-                title="YouTube video player" frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen/>
     </div>
   )
 }

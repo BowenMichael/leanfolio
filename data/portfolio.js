@@ -197,18 +197,36 @@ const about = {
   // all the properties are optional - can be left empty or deleted
   // each element in the description array is a paragraph
   name: 'Michael Bowen',
-  role: 'Game Programmer',
+  role: 'Robotics Programmer',
   description: [
-    'Graduating in May 2023 with a focus in game devops, physics, and backend.',
+    '- Creating novel products and technologies across a full-stack of technology from Web to Robotics to Virtual Reality.\n',
+    '- Connecting user experience into well crafted backend architecture whether creating graphics for a video game or build UI for robots.\n',
+    '- Communicating clear and discrete segments of work to stay on task and work within a team.\n',
   ],
-  img : '/images/profile/michaelSmaller.png',
-  resume: '/Resumes/Michael-Bowen_Resume_09-25-2023.pdf',
+  img : '/images/profile/rigorousmichael.avif',
+  resume: '/Resumes/Michael-Bowen_Resume_12-07-2024.pdf',
   social: {
     linkedin: 'https://www.linkedin.com/in/bowen-michael/',
     github: 'https://github.com/BowenMichael',
   },
   greetingEmoji: '👋',
 }
+
+const WorkData = [
+  {
+    href : 'bob',
+    thumbnail: 'https://media.licdn.com/dms/image/v2/D4E22AQE3D3YPa_rIpg/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1729538288776?e=1736380800&v=beta&t=tRieXOIz2jydiQcHQWHbFGarQtbo-IpmmMTvX40JTBk',
+    name: 'BOB the Robot',
+    description: [
+      'Role: Junior Programmer',
+      'I currently work at Rigorous Technology developing advanced robotics for manufacturing. Currently I am working on BOB a automated palletizer.'
+    ],
+    stack: ['C/C++', 'FANUC', 'Typescript', 'Sub/Pub Communications'],
+    details: ['### Demo',
+      '<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7245518315421339649" height="775" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>',],
+    livePreview: 'https://www.rigorous.co/',
+  }
+]
 
 const ProjectsData = [
   // projects can be added and removed
@@ -491,4 +509,4 @@ const contact = {
   email: 'https://www.linkedin.com/in/bowen-michael/',
 }
 
-export { about, ProjectsData, skills, contact }
+export { about, ProjectsData, skills, contact, WorkData }

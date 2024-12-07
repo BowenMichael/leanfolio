@@ -2,6 +2,7 @@ import Navbar from '../components/Navbar'
 import About from '../components/About'
 import Skills from '../components/Skills'
 import Projects from '../components/Projects'
+import Work from '../components/Work'
 import Contact from '../components/Contact'
 import ScrollToTop from '../components/ScrollToTop'
 import Footer from '../components/Footer'
@@ -37,6 +38,7 @@ function App() {
       <main>
         <About />
         <div className={`${window.location.href === '#projects' || '#skills' || '#contact' ? '' : 'animate__animated animate__fadeInUp animate__delay- 2s'}`}>
+            <Work/>
             <Projects />
             <Skills />
             <Contact />
