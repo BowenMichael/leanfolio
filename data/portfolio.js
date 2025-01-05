@@ -204,7 +204,7 @@ const about = {
     '- Communicating clear and discrete segments of work to stay on task and work within a team.\n',
   ],
   img : '/images/profile/rigorousmichael.avif',
-  resume: '/Resumes/Michael-Bowen_Resume_12-07-2024.pdf',
+  resume: 'https://docs.google.com/document/d/1v-lUShnk8j4T5FdvL17wWVPZ7B3ffAPd7yFGYTbQVO0/edit?usp=sharing',
   social: {
     linkedin: 'https://www.linkedin.com/in/bowen-michael/',
     github: 'https://github.com/BowenMichael',
