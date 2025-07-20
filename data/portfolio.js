@@ -194,14 +194,16 @@ const JSONData= '' +
 // endregion
 
 const about = {
-  // all the properties are optional - can be left empty or deleted
-  // each element in the description array is a paragraph
   name: 'Michael Bowen',
   role: 'Robotics Programmer',
   description: [
-    '- Creating novel products and technologies across a full-stack of technology from Web to Robotics to Virtual Reality.\n',
-    '- Connecting user experience into well crafted backend architecture whether creating graphics for a video game or build UI for robots.\n',
-    '- Communicating clear and discrete segments of work to stay on task and work within a team.\n',
+    'I design and build robotic systems that move through space and interact with people — safely, precisely, and efficiently.',
+
+    'I began my career in video game development, where I studied system design, interaction, and physics-based motion. Today, I apply those skills to real-world automation as a Junior Software Engineer at Rigorous Technology.',
+
+    'My work includes programming FANUC CRX and M-Series robots, developing digital twin simulations in Roboguide, and designing IO-driven state machines for factory automation. I also implement safety protocols and vision systems using tools like OpenCV and Ethernet/IP.',
+
+    'Games taught me how to think in systems. Robotics lets me build them for the physical world.'
   ],
   img : '/images/profile/rigorousmichael.avif',
   resume: 'https://docs.google.com/document/d/1v-lUShnk8j4T5FdvL17wWVPZ7B3ffAPd7yFGYTbQVO0/edit?usp=sharing',
@@ -210,281 +212,214 @@ const about = {
     github: 'https://github.com/BowenMichael',
   },
   greetingEmoji: '👋',
-}
+};
 
 const WorkData = [
   {
     href : 'bob',
-    thumbnail: 'https://media.licdn.com/dms/image/v2/D4E22AQE3D3YPa_rIpg/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1729538288776?e=1736380800&v=beta&t=tRieXOIz2jydiQcHQWHbFGarQtbo-IpmmMTvX40JTBk',
-    name: 'BOB the Robot',
+    thumbnail: '/images/bob.webp',
+    name: 'The RIG Palletizer',
     description: [
-      'Role: Junior Programmer',
-      'I currently work at Rigorous Technology developing advanced robotics for manufacturing. Currently I am working on BOB a automated palletizer.'
+      'At Rigorous Technology, I work on BOB, an automated palletizing system. I program FANUC robots, create digital twin simulations in Roboguide, and design IO-based state machines for precise motion control. My work blends robotics, safety systems, and real-time feedback to enable efficient automation on the factory floor.'
     ],
-    stack: ['C/C++', 'FANUC', 'Typescript', 'Sub/Pub Communications'],
-    details: ['### Demo',
-      '<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7245518315421339649" height="775" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>',],
+    stack: [
+      'FANUC Robotics',
+      'Roboguide',
+      'OpenCV',
+
+      'Ethernet/IP',
+      'C++',
+      'TypeScript'
+    ],
+    details: [
+      '### [Vision Talk](https://www.linkedin.com/posts/rigoroustech_what-a-night-rigorous-technology-was-thrilled-activity-7308485718127882240-jMRr?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAC4wvrgB82pARQ6iQb94ZHXBn3dNc3iwqQ0)',
+      '<img src="/images/hardware-meetup.jpg" width="504"></img>',
+      "I recieved the opportunity to talk at the Burlington Hardware Meetup. Rigourous was the host and I talked about our vision system. How we pick out a box from the end of the line and adjust the robot motion in real time.",
+      '### Demo',
+      '<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7245518315421339649 " height="775" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>',
+      '### Rigorous robots in action',
+      '<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7298402302116134913?compact=1" height="399" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>'
+    ],
     livePreview: 'https://www.rigorous.co/',
   }
-]
+];
 
 const ProjectsData = [
   // projects can be added and removed
   // if there are no projects, Projects section won't show up
   // each element in the description array is a paragraph
   {
-    href : 'dead-pedal',
+    href: 'dead-pedal',
     thumbnail: '/projects/dead-pedal/DeadPedal-2.png',
     name: 'Dead Pedal',
     description: [
-        'As Lead Programmer, I maintained an Unreal CI/CD pipeline, creating and iterating our car physics, as well as establishing the programming team\'s feature timeline.'
-      ],
+      "As Lead Programmer, I maintained an Unreal CI/CD pipeline, iterated on our car physics, and established the feature timeline for the programming team."
+    ],
     stack: ['Lead Programmer', 'UE5', 'Git', 'Jenkins', 'Google Cloud'],
-    details: ['<div><a href="#Google">Google Cloud</a><br/> <a href="#Missions">Mission System</a><br/> <a href="#Learn">Learn More</a><div/>',
-        '### The Game',
-      'In Dead Pedal you play as John D. Pedal in a post apocalyptic world fending of ruthless marauders and mutant beasts. ' +
-      'Upgrade you car with new weapons and customizations by taking out various factions. When your ready take on THE WORM and bring peace back to the mojave.',
-      'Planned Steam release May 2023.',
-        '<iframe width="100%" height="315" src="https://www.youtube.com/embed/hmdd7PEL4Rg" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+    details: [
+      '<div><a href="#Google">Google Cloud</a><br/> <a href="#Missions">Mission System</a><br/> <a href="#Learn">Learn More</a><div/>',
+      '### The Game',
+      'In Dead Pedal, you play as John D. Pedal in a post-apocalyptic world, fending off ruthless marauders and mutant beasts. Upgrade your car with new weapons and customizations by taking out various factions. When you’re ready, take on THE WORM and bring peace back to the Mojave.',
+      'Planned Steam release: May 2023.',
+      '<iframe width="100%" height="315" src="https://www.youtube.com/embed/hmdd7PEL4Rg" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
       '### Timeline',
-      'Starting development in September 2022 I worked on a cross-disciplinary team of developers to create Dead Pedal for the Champlain College Game studio.',
-      'We made the decision to learn Unreal Engine 5 to utilize Chaos Physics, World Partition and leverage Unreal\'s rendering.',
+      "Development began in September 2022. I worked with a cross-disciplinary team to create Dead Pedal for the Champlain College Game Studio. We chose Unreal Engine 5 to take advantage of Chaos Physics, World Partition, and its rendering pipeline.",
       '<div id="Google"/>',
       '## Technical Details',
       '### Google Cloud',
-      'At the beginning of the project we identified our ability to iterate as a key area of risk. ' +
-      'To create a driving system that would be intuitive and function as players would expect we need to ' +
-      'ensure we could test efficiently. We created the build server to drastically reduce the time and effort in creating a build.' +
-      'This not only saved time when putting builds together but it saved time when testing because the builds were easily ' +
-      'accessible. Every week we knew the state of the build which built confidence in how people interacted with the build.',
+      'We identified build iteration speed as a risk. To mitigate this, we created a CI/CD build server that made builds more accessible and consistent. This ensured the team had confidence in the current state of the game every week.',
       '#### Overview',
-      'The build server has 5 core elements that allow for this pipeline.',
-      '\n- The repo(we used git)' +
-      '\n- The Jenkins server' +
-      '\n- Google cloud build agents' +
-      '\n- Google cloud buckets' +
-      '\n- Team notification',
-      '<img class="project__image" src="/projects/dead-pedal/build-pipeline-git.PNG" alt="Markdown Monster icon" width="100%"  />',
-      '#### Repo',
-      'The build needs to be stored somewhere in our case it was stored in Git. However it could be upgraded to support SVN or Perforce'+
-      'The build also gets cached onto the build server instance so a large repo size is not a problem.',
+      'The pipeline consisted of:',
+      '- Git repository',
+      '- Jenkins server',
+      '- Google Cloud build agents',
+      '- Google Cloud buckets',
+      '- Team notifications via Discord',
+      '<img class="project__image" src="/projects/dead-pedal/build-pipeline-git.PNG" width="100%" />',
       '#### Jenkins Server',
-      'The Jenkins server exists as the brains of this operation. It manages all the commands, artifacts and manages the ' +
-      'build instances. This supports user authentication so you can give your team access to this to avoid any build ' +
-      'bottlenecks. anyone with access to the jenkins server can generate a build at any time',
-      '<img class="project__image" src="/projects/dead-pedal/Jenkins.PNG" alt="Markdown Monster icon" width="100%"  />',
-      '#### Cloud build agents',
-      'The cloud build agents are machines with larger allocations of compute to support building the game. ' +
-      'This is where your game will be build before the build is saved. These machines are custom images ' +
-      'so they can support any necessary third party libraries required for compute.', 
-      '#### Google Cloud Buckets',
-      'The builds then get saved to google cloud buckets. This gives anyone with access ' +
-      'to the link the ability to download the game. this will reduce time to retreating your game and testing it.', 
-      '#### Finally Team integration',
-      'This is all good but if it is not publicly available to your team it will only exist in the background. ' +
-      'Notifying your team via discord or slack is important to automatically communicate the build status to your team',
-      '<img class="project__image" src="/projects/dead-pedal/Jenkins-notification.PNG" alt="Markdown Monster icon" width="100%"  />',
-        '### Conclusion',
-        'This approach not only will give you more confidence in your build integrity ' +
-        'but it will allow your team to test the CURRENT version of the build much faster.' +
-        'This is also the starting point for more complex things like automated testing and tracking of users interaction with your game',
-      '<div id="Missions"/><br/><br/><br/>',
-        '### Mission System',
-        'The Goal with the mission system was to create something that could be scaled out by the design team. ' +
-        'Given the open world nature of our game we wanted a mission system that would not confine the player. ' +
-        'I settled on created a C++ back end that would create a blueprint front end that could be extensible with ' +
-        'unique behaviors.',
-        '#### Tutorials',
-        'In an effort to document these systems I took a visual approach as opposed to a word document. I created a ' +
-        'series of videos that show how to set up mission blueprints and mission triggers through out the level. This ' +
-        'allowed me to show off some of the smaller details about the system without creating a verbose document.',
-        (<div className={'projects__grid'}>
-          <a href="https://drive.google.com/file/d/1kIpO7VjVfOaTn34qGA2ZcYQWsIKimLJz/view?usp=sharing" > Mission System Part 1: Mission Manager Blueprint Overview</a>
-          <a href="https://drive.google.com/file/d/1TV6QAZoXz2dYhz-RzTvbBmMEODNU4yZz/view?usp=sharing" > Mission System Part 2: Mission trigger system overview</a>
-          <a href="https://drive.google.com/file/d/1gxpQQFnSTaQlMyN9ASqstNcU3IwE7oYW/view?usp=share_link" > Mission System Part 3: Setting up Mission targets</a>
-          <a href="https://drive.google.com/file/d/1e_cskuIvzglVsWn1T-Ttm-ggGp4tnQUI/view?usp=share_link" > Mission System Part 4: Setting up AI patrols</a>
-        </div>),
-        '#### BP Mission',
-        'The Mission is the core of what all unique missions were built off. This allowed contained behavior that was ' +
-        'specific to a mission type. If the goal was to drive to a location or take out key base targets that could all ' +
-        'be defined in the mission.',
-      (<CopyBlock text={BP_Mission} language={"cpp"} wrapLines={true} theme={dracula}/> ),
-        '#### BP Mission Manager',
-        'The Mission Manager is responsible for keeping track of the active mission. This means keep the UI up to date ' +
-        'and keeping track of completed missions. This allowed for common mission actions to be take care of in one place.',
-      (<CopyBlock text={BP_MissionManager} language={"cpp"} wrapLines={true} theme={dracula}/> ),
-        
+      'The Jenkins server managed builds, authentication, and artifacts. Anyone on the team could trigger a build, removing bottlenecks.',
+      '<img class="project__image" src="/projects/dead-pedal/Jenkins.PNG" width="100%" />',
+      '#### Build Agents & Buckets',
+      'Builds were processed by Google Cloud VMs and uploaded to Cloud Buckets for quick access. The team received notifications once a build was ready.',
+      '<img class="project__image" src="/projects/dead-pedal/Jenkins-notification.PNG" width="100%" />',
+      '### Conclusion',
+      'This build system improved confidence and iteration speed and opened the door for future automation like playtesting and analytics.',
+      '<div id="Missions"/>',
+      '### Mission System',
+      'We designed a scalable, modular mission system using C++ and Blueprint. It allowed designers to create open-world missions without heavy technical support.',
+      '#### Tutorials',
+      'I created video walkthroughs to document the setup of mission blueprints and triggers:',
+      '<div className={\"projects__grid\"\}\>' + 
+        '<a href="https://drive.google.com/file/d/1kIpO7VjVfOaTn34qGA2ZcYQWsIKimLJz/view?usp=sharing">Part 1: Mission Manager Overview</a\>' +
+        '<a href="https://drive.google.com/file/d/1TV6QAZoXz2dYhz-RzTvbBmMEODNU4yZz/view?usp=sharing">Part 2: Trigger System Overview</a\>' +
+        '<a href="https://drive.google.com/file/d/1gxpQQFnSTaQlMyN9ASqstNcU3IwE7oYW/view?usp=share_link">Part 3: Setting Up Mission Targets</a\>' +
+        '<a href="https://drive.google.com/file/d/1e_cskuIvzglVsWn1T-Ttm-ggGp4tnQUI/view?usp=share_link">Part 4: AI Patrol Setup</a\>' +
+      '</div\>',
+      '#### Blueprint Mission',
+      'Each mission was a Blueprint class inheriting from a common C++ base. Behavior could be overridden for different mission types.',
+      (<CopyBlock text={BP_Mission} language={"cpp"} wrapLines={true} theme={dracula}/>),
+      '#### Mission Manager',
+      'Managed active missions, UI updates, and completion logic.',
+      (<CopyBlock text={BP_MissionManager} language={"cpp"} wrapLines={true} theme={dracula}/>),
       '<div id="Learn"/>',
-        '## Access',
-        'If you are interesting in accessing this reach out to me on linkedin, via email or phone number and we can ' +
-        'set up a meeting to go over how you might integrate this into your pipeline.',
-        '<a href="https://www.linkedin.com/in/bowen-michael/">Linkedin</a>',
-        '<a href="mailto::michael@thebowenfamily.com">michael@thebowenfamily.com</a>',
-        '<a href="call::5856358255">5856358255</a>'
-        
-        
+      '## Access',
+      'If you’re interested in using or learning more about these tools, reach out:',
+      '<a href="https://www.linkedin.com/in/bowen-michael/">LinkedIn</a>',
+      '<a href="mailto:michael@thebowenfamily.com">michael@thebowenfamily.com</a>',
+      '<a href="tel:5856358255">585-635-8255</a>'
     ],
     livePreview: 'https://store.steampowered.com/app/2250160/Dead_Pedal/',
   },
   {
-    href : 'turbo-hybrid',
+    href: 'turbo-hybrid',
     thumbnail: '/projects/turbo-hybrid/turbo-hybrid-cube.gif',
     name: 'Turbo-Hybrid Game Engine',
     description: [
-      'The Turbo Hybrid Game Engine is a 3D game framework that includes a game object component system built using a structure of arrays, JSON data serialization, and bgfx 3D rendering.',
+      'The Turbo Hybrid Game Engine is a custom 3D game framework built using a structure-of-arrays ECS system, SDL2, JSON serialization, and bgfx rendering. It was developed over 15 weeks as part of a Champlain College course on game engine architecture.'
     ],
-    stack: ['C++', 'SDL2', 'bgfx' ],
-    details: ['### Overview',
-    'This project was completed over 15 weeks as apart of a class on game engine development during the Fall of 2022. Creating an SDL window, game objects, components, and basic player movement were core to the course design. JSON parsing and 3D rendering were optional components. As a part of the final project I teamed up with Steven Annunziato to help with Implementing a 3D renderer.',
-    'We made the design decision to ensure our solution allowed for custom shaders on a per object basis. We settled on bgfx for its wide use in games including Minecraft. It also abstracted the backend service decreasing the time and boilerplate for setting up OpenGL. With solid documentation we dove head first implementing a MVP matrix for each game object that had a cube component renderer.',
-    '## Technical Details',
-    'Below is a blog post going into all the details about our rendering implementation.',
-    '### Personal Contributions:\n' +
-    '\n' +
-    '* Implemented emscripten and windows build systems using SDL and C++.\n' +
-    '* Utilized JSON file format for reading game object and component data.\n' +
-    '* Worked on integrating bgfx 3D rendering library into the engine and built out a cube renderer component\n',
-    '### Overview\n' +
-    'In a world of game engines and package managers, it is easy to become detached from the core processes that make up modern software. For game developers, this comes in the form of software like Unity, Unreal Engine, Gamemaker, and Godot. Especially in 3D software, the process of rendering is taken for granted. Even the idea of creating an application window can be a concept that is hard to grasp. This was true for me before starting to build this engine. I have been using PCs since Windows XP yet I had no intuition about how to create a window.',
-      'The Turbo Hybrid Game engine was created to teach myself how to build an application from scratch.\n' +
-      'The goals for this engine:\n' +
-      '\n' +
-      '* Build a game engine application from scratch\n' +
-      '* Compile to multiple platforms\n' +
-      '* Data loaded from JSON\n' +
-      '* Render 3D graphics',
-      '### GameObject Data',
-      'All the game objects are stored inside json with a component structure. The list of game objects is an array and ' +
-      'each component is marked is a 4 letter string. Each 4 letter string can be converted into a enum representing a ' +
-      'component type. Here is a simple file where the components are TRAN(Transform), CUBE(Cube renderer), and PLRC(Player Controller).',
-      (<CopyBlock text={JSONData} language={"JSON"} wrapLines={true} theme={dracula}/> ),
-      '### 3D Graphics\n',
-      'The main chunk of this project was the 3D Graphics rendering. The project was completed as a part of the Champlain College Game Programming curriculum. But when it came to how we implemented Serialization and what we did for our final project approaches differed. I worked with [StevenAnnunziato](https://github.com/StevenAnnunziato) to develop our 3D graphics solution. We decided to implement bgfx as an intermediate graphics library. This allowed us to focus on the concepts of 3D rendering rather than getting stuck on lower ideas. This also allowed me to focus on integrating it into the engine while Steve was able to integrate the shaders.\n' +
-      '\n',
-      '#### Creating a render function\n',
-      (<img width={'100%'} src='/projects/turbo-hybrid/Cube-rendering.png'/>),
-      'The first thing I want to look at is the render function. Inside my main loop, I am creating two matrices that I am going to pass into bgfx to define my 3D space. These matrices are the view matrix and projection matrix. The View matrix defines my camera while the projection matrix determines the type of camera. the two most common types are perspective and orthographic. Here I am using perspective. This means I am defining a perspective camera.',
-      '#### [glm::Namespace](https://github.com/g-truc/glm)',
-      'GLM is a math library that we needed to use on windows because the built-in math library inside of bx was not suitable for use on windows. GLM is an open source header-only math library. GLM is based on the OpenGL specification which makes it perfect for our use.',
-      (<CopyBlock text={mainRenderFunction} language={"cpp"} wrapLines={true} theme={dracula}/> ),
-      '### Rendering Cube render components',
-      'The Turbo hybrid engine uses a component bases structure of arrays. This means that all the components are stored on the stack right next to each other. By looping through an array of CubeRenderer components I compute specific actions. Each CubeRenderer component references the same vertex and index buffers that define the cube. They also are using the same shader program.',
-      (<CopyBlock text={cubeRenderFunction} language={"cpp"} wrapLines={true} theme={dracula}/> ),
-      (<img width={'100%'} src='/projects/turbo-hybrid/turbo-hybrid-alternating-rotate.gif'/>),
-      'This is what renders each cube component separately. Adding things like mesh information and setting different shaders would just be a matter of changing out the buffers and the program. Adding additional components for things like collision would be the first step to making a more versatile game engine.\n' +
-      '\n',
-      '### Conclusion\n',
-      'I learned a lot from developing this engine. It was really satisfying to see all the steps of the process from window creation to rendering full 3D images. Bgfx was a great option for developing my own 3D components while maintaining control of the graphics pipeline while interfacing with your graphics backend of choice. It also supports various backends and platforms which makes it a great option for games. This project is only scratching the surface but I am really glad to of had the experience.',
-      'If your interested in the codebase it is on my GitHub and if you have any questions feel to shoot me a message on linkedin',
-
-      '' +
-    ''],
+    stack: ['C++', 'SDL2', 'bgfx'],
+    details: [
+      '### Overview',
+      'This game engine project focused on building a custom engine from scratch, including core systems like game object management, component handling, and rendering pipelines. We supported cross-platform builds using Emscripten and implemented 3D rendering with bgfx.',
+      'I collaborated with Steven Annunziato to implement a 3D rendering system. We prioritized shader flexibility and chose bgfx for its abstraction of backend graphics APIs and strong documentation.',
+      '### Technical Highlights',
+      '* Created windowing and input systems using SDL2',
+      '* Designed a structure-of-arrays ECS model for game objects and components',
+      '* Used JSON for data-driven configuration of game objects',
+      '* Integrated bgfx for efficient GPU rendering and shader pipeline support',
+      '* Supported build targets for both Windows and Web (via Emscripten)',
+      '### Rendering System',
+      'Implemented a cube rendering component with MVP matrix support. Each object can define its own shader, and the engine is built to be extensible for future rendering features.',
+      '<img width="100%" src="/projects/turbo-hybrid/Cube-rendering.png" />',
+      '<img width="100%" src="/projects/turbo-hybrid/turbo-hybrid-alternating-rotate.gif" />',
+      '### Sample GameObject JSON',
+      'Components: TRAN (Transform), CUBE (Cube Renderer), PLRC (Player Controller)',
+      (<CopyBlock text={JSONData} language="json" wrapLines={true} theme={dracula}/>),
+      '### Main Render Function',
+      (<CopyBlock text={mainRenderFunction} language="cpp" wrapLines={true} theme={dracula}/>),
+      '### Cube Renderer Loop',
+      (<CopyBlock text={cubeRenderFunction} language="cpp" wrapLines={true} theme={dracula}/>),
+      '### Conclusion',
+      'Building this engine gave me a deeper appreciation for the systems that power 3D games. The project helped reinforce fundamentals of rendering, data design, and low-level graphics integration.'
+    ],
     sourceCode: 'https://github.com/BowenMichael/Turbo-Hybrid-Game-Engine',
-    livePreview: 'https://docs.google.com/presentation/d/1pGFhkVGUu52NhdT-uWjjTgoqjUhPl1Ncy2UQMJzD5Ig/edit?usp=sharing',
+    livePreview: 'https://docs.google.com/presentation/d/1pGFhkVGUu52NhdT-uWjjTgoqjUhPl1Ncy2UQMJzD5Ig/edit?usp=sharing'
   },
+  
   {
-    href : 'hand-tracking-vr',
+    href: 'hand-tracking-vr',
     thumbnail: '/projects/hand-tracking/thumbnail.png',
     name: 'Oculus Hand Tracking Demo',
     description: [
-      'Oculus Hand tracking demo. This game was created on a team of 4. I was responsible for delivering hand tracking integration into the game. Took spell systems and adapted them for Oculus VR hand controls. This included Input poses, adapted throwing to a shoot, and alternate locomotion.',
+      'Developed a VR spellcasting demo in Unity using Oculus Quest 2 hand tracking. I adapted existing spell systems to work with gesture-based input, implementing new mechanics like gesture-driven shooting and alternative locomotion. Worked on a team of four, owning the hand tracking and input design.'
     ],
-    stack: ['VR', 'Unity', 'Oculus Quest 2', 'Oculus Hand Tracking', 'Unity VR', 'Hand Pose inputs', 'Hand tracking design'],
-    details: ['### Demo Video',
-    '<iframe src="https://drive.google.com/file/d/14NW3659T9bssBLZm8n4agDkqIjrP9HCC/preview" width="100%" height="360" allow="autoplay"></iframe>',
-    ''],
-    livePreview: 'https://drive.google.com/file/d/14NW3659T9bssBLZm8n4agDkqIjrP9HCC/view?usp=sharing',
+    stack: ['VR', 'Unity', 'Oculus Quest 2', 'Oculus Hand Tracking', 'Unity VR', 'Hand Pose Inputs', 'Gesture-based Design'],
+    details: [
+      '### Demo Video',
+      '<iframe src="https://drive.google.com/file/d/14NW3659T9bssBLZm8n4agDkqIjrP9HCC/preview" width="100%" height="360" allow="autoplay"></iframe>'
+    ],
+    livePreview: 'https://drive.google.com/file/d/14NW3659T9bssBLZm8n4agDkqIjrP9HCC/view?usp=sharing'
   },
-
   {
-    href : 'olfactory-VR',
+    href: 'olfactory-VR',
     thumbnail: '/projects/well-being/well-being-thumbnail.png',
     name: 'Olfactory VR Meditation',
     description: [
-      'Worked with Ion Technologies to integrate the Ion scent device into an immersive VR meditation experience. Developed for a study on how immersive technologies can be used to enhance well being',
-      
+      'Collaborated with Ion Technologies to develop a VR meditation experience enhanced with scent delivery. Integrated the Ion scent device with the Unity Interaction Toolkit on the Pico Neo 2. Created a smooth and immersive experience as part of a study on wellbeing and immersive tech.'
     ],
-    stack: ['Pico Neo 2', 'Unity Interaction Toolkit', 'Android', 'Ion Scent'],
-    details: ['### Live Demo',
-      '<iframe src="https://drive.google.com/file/d/1mn-pmESa-8kyll-9QarV-EdaCwwexoFB/preview" width="100%" height="480" allow="autoplay"></iframe>',],
-    livePreview: 'https://drive.google.com/file/d/1mn-pmESa-8kyll-9QarV-EdaCwwexoFB/view?usp=sharing',
+    stack: ['Pico Neo 2', 'Unity Interaction Toolkit', 'Android', 'Ion Scent Device'],
+    details: [
+      '### Live Demo',
+      '<iframe src="https://drive.google.com/file/d/1mn-pmESa-8kyll-9QarV-EdaCwwexoFB/preview" width="100%" height="480" allow="autoplay"></iframe>'
+    ],
+    livePreview: 'https://drive.google.com/file/d/1mn-pmESa-8kyll-9QarV-EdaCwwexoFB/view?usp=sharing'
   },
   {
-    href : 'boat-combat',
+    href: 'boat-combat',
     thumbnail: '/projects/boat-combat/thumbnail.png',
     name: 'Boat Combat',
     description: [
-      'A mobile networked boat combat game about taking over points in the arena.\n ' +
-      'Using accelerometer or touch controls the player takes on an opponent in a 1v1 experience. ' +
-      'This game was an opportunity to develop skills in mobile and networked development.',
+      'Built a networked mobile game where players control boats in 1v1 arena combat. Players can use accelerometer or touch controls to capture points and defeat opponents. Focused on mobile development and real-time multiplayer networking in Unity.'
     ],
-    stack: ['Mobile', 'Unity', 'Networking', '1v1', 'Accelerometer', 'Objectives', 'Gameplay'],
-    details: ['### Demo Video',
-      '<iframe src="https://drive.google.com/file/d/16AJ3fHggciywTfD9s9z9kTts-QXjJOT4/preview" width="100%" height="360" allow="autoplay"></iframe>',
-      ''],
-    livePreview: 'https://drive.google.com/file/d/16AJ3fHggciywTfD9s9z9kTts-QXjJOT4/view?usp=sharing',
+    stack: ['Mobile', 'Unity', 'Networking', 'Multiplayer', 'Accelerometer', 'Touch Input', 'Arena Gameplay'],
+    details: [
+      '### Demo Video',
+      '<iframe src="https://drive.google.com/file/d/16AJ3fHggciywTfD9s9z9kTts-QXjJOT4/preview" width="100%" height="360" allow="autoplay"></iframe>'
+    ],
+    livePreview: 'https://drive.google.com/file/d/16AJ3fHggciywTfD9s9z9kTts-QXjJOT4/view?usp=sharing'
   },
   {
-    href : 'Spartakids',
+    href: 'Spartakids',
     thumbnail: '/projects/spartakids/spartakids-thumbnail.png',
     name: 'Spartakids',
     description: [
-      'Spartakids was developer as a part of the 2022 Ubisoft Game Lab Competition. The theme for the year was \'Student XP\'. Our interpretation of the theme lead us to a co-op boss fighter about the magic of play.',
+      'Developed for the 2022 Ubisoft Game Lab Competition, Spartakids is a co-op boss fight game themed around childhood imagination. Players face off against a massive imaginary creature using creative weapons like a compass bow and marker sword. Focused on gameplay programming, networking, and UI integration.'
     ],
-    stack: ['Unity', 'Networking', 'UI', 'Networked Events', 'Gameplay'],
-    details: ['<div class="project__image-container"><img class="project__image about__image" src="/projects/spartakids/spartakids-logo-2.png" alt="Markdown Monster icon" width="100%"  /></div>',
-    'Spartakids is a co-op third-person boss fighting game developed for the 2022 Ubisoft Game Lab Competition. The game takes on the student experience as seen through the lens of play and imagination. You and your friend take on your imaginary monster during recess. Fight with your marker sword or compass bow to take down Spike. Make sure when the floor turns to lava to take to higher ground on top of the jungle gym. You and your friend trade weapons on top of the dome so make sure that you trading your perks so they are most effective.\n' +
-    '\n',
-    '### [Gameplay Video](https://www.youtube.com/watch?v=xEEImDZ5lIs)\n',
-    '### [Itch.io](https://larnio.itch.io/spartakids)\n',
-    /*'### Details\n',
-    '* 10 Weeks from January 27-April 7th 2022 ~10h per week\n' +
-    '* Team Size: 8\n' +
-    '* My Role: Network/UI/Gameplay programmer\n' +
-    '* Game Engine: Unity3D Network Architecture: Photon Pun v1\n',
-    '### Our game\n',
-    'As stated above SpartaKids is a co-op boss fighting game where you and a partner play out your fantasy of fighting a imaginary creature. This game required many interconnected components and systems to convey the context and have a compelling experience. They include:\n' +
-    '\n' +
-    '* Networked Boss AI\n' +
-    '* player weapons systems and general CCC\n' +
-    '* Perks/UI systems\n' +
-    '* Networked systems and animations\n' +
-    '* cinematic/particles to convey context\n',
-    '### Personal Contribution\n',
-    'I started the project as a gameplay programmer focusing on CCC. It was quickly identified that Networking was going to be vital for the co-op experience so I shifted my focus during the project to network gameplay elements. As well as timelines, perks, and UI.\n' +
-    '\n' +
-    'What I worked on:\n' +
-    '\n' +
-    '* Networking\n' +
-    '* CCC\n' +
-    '* Implementing art and animations\n' +
-    '* Perks and Perk sharing menu functionality\n' +
-    '* Perk UI\n' +
-    'The networked areas included:\n' +
-    '\n' +
-    '* Player and boss animations\n' +
-    '* Player and boss attacks\n' +
-    '* Sharing perks and the perk menus\n' +
-    '* Perk particle effects\n',
-    '### The Competition\n',
-    'The Ubisoft Game Lab competition is run by Ubisoft Montreal and invites Schools from the US and Canada to compete for scholarship prizes through a 10-week game jam. This year 22 schools competed to create games surrounding the theme "student experience". The game had to:\n' +
-    '\n' +
-    '* Relate to the Student Experience in some way.\n' +
-    '* Be a networked game for 1-8 players\n' +
-    '* Contain some element of AI\n' +
-    '* Contain some elements of customization to alter the experience for each player.\n',
-    '### Review\n',
-    'This project contained a lot of scope for a 10-week prototype. The networking, animations and general game feel were all areas that could have taken 10 weeks on there own. In this article I go into the struggles of learning networking while under specific time constraints, trying to work the student experience into an existing game idea, and reflecting on the competition. Working on a project like this without knowing networking presented some architectural pitfalls that were made obvious when data had to be sent over a network. Simple attacks and moving things across an inventory needed to be clear and serializable to communicate and display world events across a network.'*/],
-    livePreview: 'https://larnio.itch.io/spartakids',
-  },
-  
+    stack: ['Unity', 'Networking', 'UI', 'Multiplayer', 'Gameplay'],
+    details: [
+      '<div class="project__image-container"><img class="project__image about__image" src="/projects/spartakids/spartakids-logo-2.png" alt="Spartakids logo" width="100%" /></div>',
+      'Spartakids is a co-op third-person boss fighting game developed for the 2022 Ubisoft Game Lab Competition. Players face off against a monster during recess using creative weapons and cooperative mechanics. Trade perks, climb playground structures, and take down Spike the boss.',
+      '### [Gameplay Video](https://www.youtube.com/watch?v=xEEImDZ5lIs)',
+      '### [Itch.io](https://larnio.itch.io/spartakids)'
+    ],
+    livePreview: 'https://larnio.itch.io/spartakids'
+  }
 
 ]
 
 const skills = [
-    // skills can be added or removed
-    // if there are no skills, Skills section won't show up
-  {name : 'C++', href : '/projects/turbo-hybrid'},
+  {name : 'FANUC Robotics', href : '/bob'},
+  {name : 'Roboguide', href : '/bob'},
+  {name : 'Digital Twin Simulation', href : '/bob'},
+  {name : 'State Machines (IO)', href : '/bob'},
+  {name : 'TCP & End Effector Control', href : '/bob'},
+  {name : 'DCS Safety', href : '/bob'},
+  {name : 'Ethernet/IP', href : '/bob'},
+  {name : 'Teach Pendant Programming', href : '/bob'},
+  {name : 'OpenCV', href : '/bob'},
+  {name : 'Edge Detection', href : '/bob'},
+  {name : 'Sony CW-iTOF', href : '/bob'},
+  {name : 'C++', href : '/bob'},
   {name : 'C#', href : '/projects/boat-combat'},
   {name : 'Unity', href : '/projects/boat-combat'},
   {name : 'Unreal Engine', href : '/projects/dead-pedal'},
@@ -496,13 +431,13 @@ const skills = [
   {name : 'Car AI', href : '/projects/dead-pedal'},
   {name : 'VR', href : '/projects/hand-tracking-vr'},
   {name : 'OpenXR', href : '/projects/hand-tracking-vr'},
-  {name : 'Oculus Hand-Tracking', href : `/projects/hand-tracking-vr`},
+  {name : 'Oculus Hand-Tracking', href : '/projects/hand-tracking-vr'},
   {name : 'SDL2', href : '/projects/turbo-hybrid'},
   {name : 'bgfx', href : '/projects/turbo-hybrid'},
   {name : 'Next.js', href : '/#skills'},
   {name : 'TypeScript', href : '/#skills'},
-  {name : 'React', href : '/#skills'},
-]
+  {name : 'React', href : '/#skills'}
+];
 
 const contact = {
   // email is optional - if left empty Contact section won't show up

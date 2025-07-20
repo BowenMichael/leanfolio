@@ -4,7 +4,7 @@ import Navbar from "../../components/Navbar";
 import Projects from "../../components/Projects";
 import ScrollToTop from "../../components/ScrollToTop";
 import Footer from "../../components/Footer";
-import {ProjectsData} from "../../data/portfolio";
+import {ProjectsData, WorkData} from "../../data/portfolio";
 import ProjectCard from "../../components/ProjectCard";
 import uniqid from "uniqid";
 import ProjectPost from "../../components/ProjectPost";
@@ -20,7 +20,7 @@ export async function getServerSideProps(context ){
 
 const Project = (props) =>
 {
-    const [project, setProject] = useState(ProjectsData.find(project => {
+    const [project, setProject] = useState([...ProjectsData, ...WorkData].find(project => {
         return project.href === props.query.id
     }))
 
