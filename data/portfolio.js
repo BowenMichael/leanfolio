@@ -206,7 +206,7 @@ const about = {
     'Games taught me how to think in systems. Robotics lets me build them for the physical world.'
   ],
   img : '/images/profile/rigorousmichael.avif',
-  resume: 'https://docs.google.com/document/d/1v-lUShnk8j4T5FdvL17wWVPZ7B3ffAPd7yFGYTbQVO0/edit?usp=sharing',
+  resume: '/Resumes/250720_Michael_Bowen_Resume.pdf',
   social: {
     linkedin: 'https://www.linkedin.com/in/bowen-michael/',
     github: 'https://github.com/BowenMichael',
