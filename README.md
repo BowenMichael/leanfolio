@@ -11,9 +11,17 @@
 
 ## Table of Contents
 
+- [Repository Overview & Architecture](OVERVIEW.md)
+- [Development Roadmap & Proposed Issues](docs/ROADMAP.md)
 - [Differences between Leanfolio and Cleanfolio](#differences-between-leanfolio-and-cleanfolio)
 - [Getting Started](#getting-started)
 - [License](#license)
+
+## Repository Overview & Architecture
+
+For a comprehensive breakdown of the application architecture, subsystems, data structures, and technical debt audit, please refer to:
+- 📖 **[Repository Overview](OVERVIEW.md)**: System design, technology stack, and component breakdown.
+- 🗺️ **[Development Roadmap & Proposed Issues](docs/ROADMAP.md)**: Milestones, strategic phases, and prioritized GitHub issues.
 
 ## Differences between Leanfolio and Cleanfolio
 
