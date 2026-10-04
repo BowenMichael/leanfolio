@@ -24,3 +24,10 @@ yarn-error.log*
 
 .next
 .vercel
+
+# Agent Worktrees & Execution Logs
+.worktrees/
+*.log
+lint_run.log
+build_run.log
+test_run.log
